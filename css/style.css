@@ -370,6 +370,12 @@ body {
   font-weight:bold;
 }
 
+.youtube_modal {
+  background:red;
+  width:90%;
+  margin:10px auto;
+}
+
 
 
  @media screen and (max-width: 768px) {
