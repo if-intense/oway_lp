@@ -1,0 +1,213 @@
+body {
+  font-family: "Montserrat", "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", sans-serif;
+  background:red;
+}
+
+#wrapper {
+
+  height:100vh;
+  align-content: center;
+}
+
+.tabbed {
+  width:90%;
+  left:5%;
+  top:5vh;
+  position:absolute;
+}
+
+.left-sect {
+  background: linear-gradient(#b9d7e2 0%, #8ab7ef 100%);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.6);
+  border-radius: 10px;
+  padding:10px 5px 30px;
+}
+
+.left-sect .left-inner h6 {
+  text-decoration: underline;
+  font-size:1em;
+  margin-top: 20px;
+}
+
+#wrapper ul.select, #wrapper ul.choose_type {
+  margin:20px auto;
+  width:100%;
+  list-style-type: none;
+}
+
+#wrapper ul.select li, #wrapper ul.choose_type li {
+  padding-right:20px;
+}
+
+.section, .section01 {
+  display: none;
+}
+
+.balm, .soft {
+  display: block;
+}
+
+.section h2, .section01 h2 {
+  color: #404146;
+  font-size: 24px;
+  text-align: center;
+  padding:30px 0;
+  text-decoration: underline;
+}
+
+.infine {
+    margin-bottom:2vh;
+  }
+
+.infine h2 {
+  color: #404146;
+  font-size: 12px;
+  text-align: left;
+  text-decoration: none;
+  padding:30px 10px 0 10px;
+  font-style: italic;
+}
+
+.infine h3 {
+  color: #000;
+  font-size: 24px;
+  text-align: left;
+  text-decoration: none;
+  padding-left: 10px;
+  font-family: 'DDINRegular';
+}
+
+.section ul {
+  list-style-type: none;
+}
+
+
+.lined .nav-link {
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+
+.lined .nav-link:hover {
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+
+.lined .nav-link.active {
+  background: none;
+  color: #555;
+  border-color: #2b90d9;
+}
+
+ .radiobtn {
+   position: relative;
+   display: block;
+}
+ .radiobtn label {
+   display: block;
+   background: #fee8c3;
+   color: #444;
+   border-radius: 5px;
+   padding: 10px 20px;
+   border: 2px solid #fdd591;
+   margin-bottom: 5px;
+   cursor: pointer;
+}
+ .radiobtn label:after, .radiobtn label:before {
+   content: "";
+   position: absolute;
+   right: 11px;
+   top: 11px;
+   width: 20px;
+   height: 20px;
+   border-radius: 3px;
+   background: #fdcb77;
+}
+ .radiobtn label:before {
+   background: transparent;
+   transition: 0.1s width cubic-bezier(0.075, 0.82, 0.165, 1) 0s, 0.3s height cubic-bezier(0.075, 0.82, 0.165, 2) 0.1s;
+   z-index: 2;
+   overflow: hidden;
+   background-repeat: no-repeat;
+   background-size: 13px;
+   background-position: center;
+   width: 0;
+   height: 0;
+   background-image: url('../image/check-mark.svg');
+}
+ .radiobtn input[type="radio"] {
+   display: none;
+   position: absolute;
+   width: 100%;
+   appearance: none;
+}
+ .radiobtn input[type="radio"]:checked + label {
+   background: #D1B75A;
+   animation-name: blink;
+   animation-duration: 1s;
+   border-color: #60676a;
+}
+ .radiobtn input[type="radio"]:checked + label:after {
+   background: #fcae2c;
+}
+ .radiobtn input[type="radio"]:checked + label:before {
+   width: 20px;
+   height: 20px;
+}
+ @keyframes blink {
+   0% {
+     background-color: #fdcb77;
+  }
+   10% {
+     background-color: #fdcb77;
+  }
+   11% {
+     background-color: #fdd591;
+  }
+   29% {
+     background-color: #fdd591;
+  }
+   30% {
+     background-color: #fdcb77;
+  }
+   50% {
+     background-color: #fdd591;
+  }
+   45% {
+     background-color: #fdcb77;
+  }
+   50% {
+     background-color: #fdd591;
+  }
+   100% {
+     background-color: #fdcb77;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  #wrapper ul.select li, #wrapper ul.choose_type li {
+    display:column;
+  }
+
+  .tabbed {
+  position:static;
+  margin:0 auto;
+  width:98%;
+  }
+
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+  #wrapper ul.select li, #wrapper ul.choose_type li {
+    display:column;
+  }
+
+  .tabbed {
+    position:static;
+    width:100%;
+  }
+
+}

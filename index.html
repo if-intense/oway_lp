@@ -85,16 +85,71 @@ $(document).ready(function(){
         </div>
         <div class="modal-body">
           <p style="text-align: center;">今までにOWAY商品を利用したことはありますか？　<br>
-            【いいえ】の場合、カウンセリングのページに飛びます。
           </p>
         </div>
         <div class="modal-footer">
-          <a href="enquete.html" class="go_to_enquete_page">いいえ</a>
+          <!-- <a href="enquete.html" class="go_to_enquete_page">いいえ</a> -->
+          <a data-dismiss="modal" data-toggle="modal" href="#CategoryModal" class="go_to_enquete_page">いいえ</a>
           <a href="https://ifing-beauty.com/pages/oway-lineup" class="go_to_ifing_beauty">はい</a>
         </div>
       </div>
     </div>
-</div>
+  </div>
+
+  <div class="modal fade" id="CategoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="askCategoryModal"><img src="image/logo.svg" alt="OWAYロゴ" style="width:250px"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="text-align: center;">
+            興味があるカテゴリーをお選びください。
+          </p>
+          <div class="row buttons">
+
+              <a data-dismiss="modal" data-toggle="modal" href="#HairModal" class="btn btn-primary">ヘア</a>
+
+
+              <a href="men.html" class="btn btn-secondary">メン</a>
+
+
+              <a href="dog.html" class="btn btn-success">ドッグ</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="HairModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="askCategoryModal"><img src="image/logo.svg" alt="OWAYロゴ" style="width:250px"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="text-align: center;">
+            興味があるカテゴリーをお選びください。
+          </p>
+          <div class="row buttons">
+
+              <a href="enquete.html" class="btn btn-primary">ヘア</a>
+              <a href="styling.html" class="btn btn-secondary">スタイリング</a>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <nav class="navbar navbar-light bg-dark">
     <a class="navbar-brand" href="#"><img src="image/ifing_beauty_logo_white.png" alt="ifing beauty OWAY オーウェイ" class="logo img-fluid"></a>

@@ -1,0 +1,275 @@
+
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OWAYアンケート診断</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/men.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="img/ifing_logo.svg">
+      <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script>
+    $(document).ready(function(){
+        $('input[type="radio"]').click(function(){
+            var inputValue = $(this).attr("value");
+            var targetBox = $("." + inputValue);
+            $(".section").not(targetBox).hide();
+            $(targetBox).show();
+        });
+    });
+    </script>
+</head>
+
+
+
+
+    <body>
+      <div id="wrapper">
+        <nav class="navbar sticky-top navbar-light bg-light">
+          <a href="index.html">
+          <img src="image/logo.svg" alt="IFing Beauty Logo" class="logo">
+          </a>
+        </nav>
+
+      <h2 class="question">興味があるカテゴリーをお選びください。</h2>
+      <div class="col-md-8 offset-md-2">
+        <ul class="select">
+          <li><label><input type="radio" name="selection" value="styling_hair" checked="checked">　1.  スタイリング＆ヘア</label></li>
+          <li><label><input type="radio" name="selection" value="face_body">　2.  フェイス＆ボディ</label></li>
+          <li><label><input type="radio" name="selection" value="mouth_beard">　3.  口元＆ヒゲ</label></li>
+        </ul>
+
+
+
+
+      </div>
+        <!-- <label><input type="radio" name="selection" value="styling_and_hair"> スタイリング＆ヘア</label>
+        <label><input type="radio" name="selection" value="face_and_body"> フェイス＆ボディ</label>
+        <label><input type="radio" name="selection" value="mouth_and_facial_hair"> 口元＆ヒゲ</label> -->
+
+        <div class="styling_hair section h-100">
+          <h2>スタイリング＆ヘア</h2>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="type col-md-3 col-12">
+                <div class="item card">
+                  <div class="card-title">
+                    <h1>ウォーターレジン</h1>
+                  </div>
+                  <div class="card-body">
+                    <a href="#">
+                    <img src="image/product_men/water_resin.png" alt="water_resin" class="img-fluid">
+                    </a>
+                    <h3 class="card-text">ウェット感と束感を出して、<br>スタイルキープ</h3>
+                  </div>
+                  <div class="card-footer">
+                    <h6><strong>タイプ：</strong> ウォーターポマード</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="type col-md-3 col-12">
+                <div class="item card">
+                  <div class="card-title">
+                    <h1>ロウ・マッド</h1>
+                  </div>
+                  <div class="card-body">
+                    <a href="#">
+                    <img src="image/product_men/water_resin.png" alt="water_resin" class="img-fluid">
+                    </a>
+                    <h3 class="card-text">ミネラルバランスを整える<br>マットなストロングホールド</h3>
+                  </div>
+                  <div class="card-footer">
+                    <h6><strong>タイプ：</strong> ワックス</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="type col-md-3 col-12">
+                <div class="item card">
+                  <div class="card-title">
+                    <h1>バンジー・ファイバー</h1>
+                  </div>
+                  <div class="card-body">
+                    <a href="#">
+                    <img src="image/product_men/water_resin.png" alt="water_resin" class="img-fluid">
+                    </a>
+                    <h3 class="card-text">無造作スタイルに仕上げて<br>適度にホールド</h3>
+                  </div>
+                  <div class="card-footer">
+                    <h6><strong>タイプ：</strong> ファイバーワックス</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="type col-md-3 col-12">
+                <div class="item card">
+                  <div class="card-title">
+                    <h1>シルバースティル・ヘアバス</h1>
+                  </div>
+                  <div class="card-body">
+                    <a href="#">
+                    <img src="image/product_men/water_resin.png" alt="water_resin" class="img-fluid">
+                    </a>
+                    <h3 class="card-text">グレイ＆ホワイトの黄ばみを抑える<br>オーガニックシャンプー</h3>
+                  </div>
+                  <div class="card-footer">
+                    <h6><strong>タイプ：</strong> シャンプー</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="face_body section h-100">
+          <h2>フェイス＆ボディ</h2>
+          <div class="container">
+            <div class="row">
+              <div class="type col-md-4 col-12">
+                <div class="item card">
+                  <div class="card-title">
+                    <h1><span>フェイス＆アイ</span><br>ハイドレイティングクレンザー</h1>
+                  </div>
+                  <div class="card-body">
+                    <a href="#">
+                      <img src="image/product_men/water_resin.png" alt="water_resin" class="img-fluid">
+                    </a>
+                    <h3 class="card-text">オーガニック洗顔クリーム<br>&nbsp;</h3>
+                  </div>
+                  <div class="card-footer">
+                    <h6><strong>タイプ：</strong>クリーム</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="type col-md-4 col-12">
+                <div class="item card">
+                  <div class="card-title">
+                    <h1><span>フェイス＆アイ</span><br>エナジーテクスチャー</h1>
+                  </div>
+                  <div class="card-body">
+                    <a href="#">
+                      <img src="image/product_men/water_resin.png" alt="water_resin" class="img-fluid">
+                    </a>
+                    <h3 class="card-text">アンチエイジング効果が高い<br>保湿用フェイスクリーム</h3>
+                  </div>
+                  <div class="card-footer">
+                    <h6><strong>タイプ：</strong>クリーム</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="type col-md-4 col-12">
+                <div class="item card">
+                  <div class="card-title">
+                    <h1><span>ヘア＆ボディ</span><br>リフレッシングウォッシュ</h1>
+                  </div>
+                  <div class="card-body">
+                    <a href="#">
+                    <img src="image/product_men/water_resin.png" alt="water_resin" class="img-fluid">
+                    </a>
+                    <h3 class="card-text">オーガニックヘア＆ボディシャンプー<br>&nbsp;</h3>
+                  </div>
+                  <div class="card-footer">
+                    <h6><strong>タイプ：</strong>シャンプー＆ボディソープ</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mouth_beard section h-100">
+          <h2>口元＆ヒゲ</h2>
+          <div class="container">
+            <div class="row">
+              <div class="type col-md-4 col-12">
+                <div class="item card">
+                  <div class="card-title">
+                    <h1>ソフニング　シェイブクリーム</h1>
+                  </div>
+                  <div class="card-body">
+                    <a href="#">
+                    <img src="image/product_men/water_resin.png" alt="water_resin" class="img-fluid">
+                    </a>
+                    <h3 class="card-text">オーガニック・シェイビングクリーム<br>&nbsp;</h3>
+                  </div>
+                  <div class="card-footer">
+                    <h6><strong>タイプ：</strong>クリーム</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="type col-md-4 col-12">
+                <div class="item card">
+                  <div class="card-title">
+                    <h1>リペアリング・アフターシェイブバーム</h1>
+                  </div>
+                  <div class="card-body">
+                    <a href="#">
+                    <img src="image/product_men/water_resin.png" alt="water_resin" class="img-fluid">
+                    </a>
+                    <h3 class="card-text">髭剃り後の肌を鎮静化する保湿クリーム<br>&nbsp;</h3>
+                  </div>
+                  <div class="card-footer">
+                    <h6><strong>タイプ：</strong>クリーム</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="type col-md-4 col-12">
+                <div class="item card">
+                  <div class="card-title">
+                    <h1>リップ＆ビアード・サルブ</h1>
+                  </div>
+                  <div class="card-body">
+                    <a href="#">
+                    <img src="image/product_men/water_resin.png" alt="water_resin" class="img-fluid">
+                    </a>
+                    <h3 class="card-text">割れやすい唇や口元の乾燥を<br>保湿するフェイスクリーム</h3>
+                  </div>
+                  <div class="card-footer">
+                    <h6><strong>タイプ：</strong>クリーム</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+
+</html>
