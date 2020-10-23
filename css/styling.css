@@ -1,6 +1,8 @@
 body {
   font-family: "Montserrat", "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", sans-serif;
-  background:red;
+  background:url('../image/bg07.jpg') no-repeat;
+  background-position: center;
+  background-size: center;
 }
 
 #wrapper {
@@ -9,11 +11,18 @@ body {
   align-content: center;
 }
 
+#wrapper h2.title {
+  margin:20px 30px;
+  color: white;
+  text-shadow: 1px 3px 6px #9a9a9a;
+}
+
 .tabbed {
   width:90%;
   left:5%;
   top:5vh;
   position:absolute;
+  background:rgba(255,255,255,0.8);
 }
 
 .left-sect {
@@ -98,11 +107,11 @@ body {
   border-color: #2b90d9;
 }
 
- .radiobtn {
+ .radiobtn, .radiobtn-type {
    position: relative;
    display: block;
 }
- .radiobtn label {
+ .radiobtn label, .radiobtn-type label {
    display: block;
    background: #fee8c3;
    color: #444;
@@ -112,7 +121,7 @@ body {
    margin-bottom: 5px;
    cursor: pointer;
 }
- .radiobtn label:after, .radiobtn label:before {
+ .radiobtn label:after, .radiobtn label:before, .radiobtn-type label:after, .radiobtn-type label:before {
    content: "";
    position: absolute;
    right: 11px;
@@ -122,7 +131,7 @@ body {
    border-radius: 3px;
    background: #fdcb77;
 }
- .radiobtn label:before {
+ .radiobtn label:before, .radiobtn-type label:before {
    background: transparent;
    transition: 0.1s width cubic-bezier(0.075, 0.82, 0.165, 1) 0s, 0.3s height cubic-bezier(0.075, 0.82, 0.165, 2) 0.1s;
    z-index: 2;
@@ -134,22 +143,22 @@ body {
    height: 0;
    background-image: url('../image/check-mark.svg');
 }
- .radiobtn input[type="radio"] {
+ .radiobtn input[type="radio"], .radiobtn-type input[type="radio"] {
    display: none;
    position: absolute;
    width: 100%;
    appearance: none;
 }
- .radiobtn input[type="radio"]:checked + label {
+ .radiobtn input[type="radio"]:checked + label, .radiobtn-type input[type="radio"]:checked + label {
    background: #D1B75A;
    animation-name: blink;
    animation-duration: 1s;
    border-color: #60676a;
 }
- .radiobtn input[type="radio"]:checked + label:after {
+ .radiobtn input[type="radio"]:checked + label:after, .radiobtn-type input[type="radio"]:checked + label:after {
    background: #fcae2c;
 }
- .radiobtn input[type="radio"]:checked + label:before {
+ .radiobtn input[type="radio"]:checked + label:before, .radiobtn-type input[type="radio"]:checked + label:before {
    width: 20px;
    height: 20px;
 }
