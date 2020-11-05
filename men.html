@@ -57,6 +57,21 @@
         });
     });
     </script>
+    <script>
+  $(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".section").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".section").hide();
+            }
+        });
+    }).change();
+});
+</script>
 </head>
 
 
@@ -70,110 +85,128 @@
           </a>
         </nav>
 
-      <h2 class="question">興味があるカテゴリーをお選びください。</h2>
-      <div class="col-md-8 offset-md-2">
+        <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 question">
+            <h2><span>興味があるカテゴリーをお選びください　<i class="fas fa-arrow-circle-down"></i></span></h2>
+        </div>
+        <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 mens-product-select">
 
 
-          <div class="radiobtn">
-            <input type="radio" id="styling_hair"
-                   name="drone" value="styling_hair" />
-            <label for="styling_hair">スタイリング＆ヘア</label>
-          </div>
-          <div class="radiobtn">
-            <input type="radio" id="face_body"
-                   name="drone" value="face_body" />
-            <label for="face_body">フェイス＆ボディ</label>
-          </div>
-          <div class="radiobtn">
-            <input type="radio" id="mouth_beard"
-                   name="drone" value="mouth_beard" />
-            <label for="mouth_beard">口元＆ヒゲ</label>
-          </div>
-      </div>
-        <!-- <label><input type="radio" name="selection" value="styling_and_hair"> スタイリング＆ヘア</label>
-        <label><input type="radio" name="selection" value="face_and_body"> フェイス＆ボディ</label>
-        <label><input type="radio" name="selection" value="mouth_and_facial_hair"> 口元＆ヒゲ</label> -->
 
-        <div class="styling_hair section h-75">
-          <h2>スタイリング＆ヘア</h2>
+
+          <select>
+            <option value="styling_hair">スタイリング＆ヘア</option>
+            <option value="face_body">フェイス＆ボディ</option>
+            <option value="mouth_beard">口元＆ヒゲ</option>
+          </select>
+          </div>
+
+
+        <div class="styling_hair section h-100">
           <div class="container-fluid">
             <div class="row">
-              <div class="type col-md-3 col-12">
-                <div class="item card">
-                  <div class="card-title">
-                    <h1>ウォーターレジン</h1>
-                  </div>
+              <!-- card-group -->
+              <div class="card-group justify-content-center">
+                <div class="card col-lg-3 col-md-3 col-sm-3">
+                  <a href="">
+                  <img class="card-img-top img-fluid" src="image/product_men/water_resin.png" alt="シルバースティル・ヘアバス">
+                  </a>
                   <div class="card-body">
-                    <a href="#">
-                    <img src="image/product_men/water_resin.png" alt="water_resin" class="img-fluid">
-                    </a>
-                    <h3 class="card-text">ウェット感と束感を出して、<br>スタイルキープ</h3>
+                    <h5 class="card-title">ウォーター・レジン</h5>
+                    <p class="card-text">ウェット感と束感を出して、<br class="br_on"><br class="br_1024"><br class="br_on_md">スタイルキープ</p>
                   </div>
                   <div class="card-footer">
-                    <h6><strong>タイプ：</strong> ウォーターポマード</h6>
+                    <small class="text-muted"><strong>タイプ：</strong> <br class="br_on_tablet">ウォーター・ポマード</small>
+                  </div>
+                </div>
+                <div class="card col-lg-3 col-md-3 col-sm-3">
+                  <a href="">
+                  <img class="card-img-top img-fluid" src="image/product_men/raw_mud.png" alt="シルバースティル・ヘアバス">
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title">ロウ・マッド</h5>
+                    <p class="card-text">ミネラルバランスを整える<br class="br_on_md br_1024">マットな<br class="br_on">ストロングホールド</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><strong>タイプ：</strong> <br class="br_on_tablet">ワックス</small>
+                  </div>
+                </div>
+                <div class="card col-lg-3 col-md-3 col-sm-3">
+                  <a href="">
+                  <img class="card-img-top img-fluid" src="image/product_men/steel_hair_bath.png" alt="シルバースティル・ヘアバス">
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title">バンジー・ファイバー</h5>
+                    <p class="card-text">無造作スタイルに仕上げて<br class="br_on_md">適度にホールド</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><strong>タイプ：</strong> <br class="br_on_tablet">ファイバー・ワックス</small>
+                  </div>
+                </div>
+                <div class="card col-lg-3 col-md-3 col-sm-3">
+                  <a href="">
+                  <img class="card-img-top img-fluid" src="image/product_men/steel_hair_bath.png" alt="シルバースティル・ヘアバス">
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title">シルバースティル・<br class="br_on_md">ヘアバス</h5>
+                    <p class="card-text">グレイ＆ホワイトの黄ばみを<br class="br_on_md br_1024">抑える<br class="br_on">オーガニックシャンプー</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><strong>タイプ：</strong> <br class="br_on_tablet">シャンプー</small>
                   </div>
                 </div>
               </div>
-              <div class="type col-md-3 col-12">
-                <div class="item card">
-                  <div class="card-title">
-                    <h1>ロウ・マッド</h1>
-                  </div>
-                  <div class="card-body">
-                    <a href="#">
-                    <img src="image/product_men/raw_mud.png" alt="ロウ・マッド" class="img-fluid">
-                    </a>
-                    <h3 class="card-text">ミネラルバランスを整える<br>マットなストロングホールド</h3>
-                  </div>
-                  <div class="card-footer">
-                    <h6><strong>タイプ：</strong> ワックス</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="type col-md-3 col-12">
-                <div class="item card">
-                  <div class="card-title">
-                    <h1>バンジー・ファイバー</h1>
-                  </div>
-                  <div class="card-body">
-                    <a href="#">
-                    <img src="image/product_men/bungee_fiber.png" alt="バンジー・ファイバー" class="img-fluid">
-                    </a>
-                    <h3 class="card-text">無造作スタイルに仕上げて<br>適度にホールド</h3>
-                  </div>
-                  <div class="card-footer">
-                    <h6><strong>タイプ：</strong> ファイバーワックス</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="type col-md-3 col-12">
-                <div class="item card">
-                  <div class="card-title">
-                    <h1>シルバースティル・ヘアバス</h1>
-                  </div>
-                  <div class="card-body">
-                    <a href="#">
-                    <img src="image/product_men/steel_hair_bath.png" alt="シルバースティル・ヘアバス" class="img-fluid">
-                    </a>
-                    <h3 class="card-text">グレイ＆ホワイトの黄ばみを抑える<br>オーガニックシャンプー</h3>
-                  </div>
-                  <div class="card-footer">
-                    <h6><strong>タイプ：</strong> シャンプー</h6>
-                  </div>
-                </div>
-              </div>
+              <!-- card group -->
+
             </div>
           </div>
         </div>
 
         <div class="face_body section h-100">
-          <h2>フェイス＆ボディ</h2>
-          <div class="container">
+          <!-- <h2>フェイス＆ボディ</h2> -->
+          <div class="container-fluid">
             <div class="row">
-              <div class="type col-md-4 col-12">
+              <div class="card-group justify-content-center">
+                <div class="card col-lg-3 col-md-6 col-sm-6">
+                  <a href="">
+                  <img class="card-img-top img-fluid" src="image/product_men/hydrating-cleanser.jpg" alt="ハイドレイティング・クレンザー">
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title"><span>フェイス＆アイ</span><br>ハイドレイティング・<br class="br_on_tablet">クレンザー</h5>
+                    <p class="card-text">オーガニック洗顔クリーム</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><strong>タイプ：</strong>クリーム</small>
+                  </div>
+                </div>
+                <div class="card col-lg-3 col-md-6 col-sm-6">
+                  <a href="">
+                  <img class="card-img-top img-fluid" src="image/product_men/energizing_texture.jpg" alt="エナジー・テクスチャー">
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title"><span>フェイス＆アイ</span><br>エナジー・テクスチャー</h5>
+                    <p class="card-text">アンチエイジング効果が高い<br class="br_on">保湿用フェイス<br class="br_on_md">クリーム</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><strong>タイプ：</strong> クリーム</small>
+                  </div>
+                </div>
+                <div class="card col-lg-3 col-md-6 col-sm-6">
+                  <a href="">
+                  <img class="card-img-top img-fluid" src="image/product_men/mineral-refresh.jpg" alt="リフレッシング・ウォッシュ">
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title"><span>ヘア＆ボディ</span><br>リフレッシング・<br clear="br_on_tablet">ウォッシュ</h5>
+                    <p class="card-text">オーガニックヘア＆<br clear="br_on_tablet">ボディシャンプー</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><strong>タイプ：</strong> シャンプー＆ボディソープ</small>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="type col-md-4 col-12">
                 <div class="item card">
                   <div class="card-title">
-                    <h1><span>フェイス＆アイ</span><br>ハイドレイティングクレンザー</h1>
+                    <h1><span>フェイス＆アイ</span><br>ハイドレイティング・クレンザー</h1>
                   </div>
                   <div class="card-body">
                     <a href="#">
@@ -189,7 +222,7 @@
               <div class="type col-md-4 col-12">
                 <div class="item card">
                   <div class="card-title">
-                    <h1><span>フェイス＆アイ</span><br>エナジーテクスチャー</h1>
+                    <h1><span>フェイス＆アイ</span><br>エナジー・テクスチャー</h1>
                   </div>
                   <div class="card-body">
                     <a href="#">
@@ -205,7 +238,7 @@
               <div class="type col-md-4 col-12">
                 <div class="item card">
                   <div class="card-title">
-                    <h1><span>ヘア＆ボディ</span><br>リフレッシングウォッシュ</h1>
+                    <h1><span>ヘア＆ボディ</span><br>リフレッシング・ウォッシュ</h1>
                   </div>
                   <div class="card-body">
                     <a href="#">
@@ -217,19 +250,57 @@
                     <h6><strong>タイプ：</strong>シャンプー＆ボディソープ</h6>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
 
         <div class="mouth_beard section h-100">
-          <h2>口元＆ヒゲ</h2>
-          <div class="container">
+          <!-- <h2>口元＆ヒゲ</h2> -->
+          <div class="container-fluid">
             <div class="row">
-              <div class="type col-md-4 col-12">
+              <div class="card-group justify-content-center">
+                <div class="card col-lg-3 col-md-6 col-sm-6">
+                  <a href="">
+                  <img class="card-img-top img-fluid" src="image/product_men/shaving_cream.jpg" alt="ソフニング・シェイブクリーム">
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title">ソフニング・シェイブ<br class="br_on_tablet">クリーム</h5>
+                    <p class="card-text">オーガニック・シェイビング<br class="br_on_tablet">クリーム</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><strong>タイプ：</strong>クリーム</small>
+                  </div>
+                </div>
+                <div class="card col-lg-3 col-md-6 col-sm-6">
+                  <a href="">
+                  <img class="card-img-top img-fluid" src="image/product_men/repairing_after_shave.png" alt="リペアリング・アフターシェイブバーム">
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title">リペアリング・アフター<br class="br_on_tablet">シェイブバーム</h5>
+                    <p class="card-text">髭剃り後の肌を鎮静化する<br class="br_on_tablet">保湿クリーム</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><strong>タイプ：</strong> クリーム</small>
+                  </div>
+                </div>
+                <div class="card col-lg-3 col-md-6 col-sm-6">
+                  <a href="">
+                  <img class="card-img-top img-fluid" src="image/product_men/lip_beard_salve.jpg" alt="リップ＆ビアード・サルブ">
+                  </a>
+                  <div class="card-body">
+                    <h5 class="card-title">リップ＆ビアード<br class="br_on_tablet">サルブ</h5>
+                    <p class="card-text">割れやすい唇や口元の乾燥を<br class="br_on_tablet">保湿するフェイスクリーム</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><strong>タイプ：</strong> クリーム</small>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="type col-md-4 col-12">
                 <div class="item card">
                   <div class="card-title">
-                    <h1>ソフニング　シェイブクリーム</h1>
+                    <h1>ソフニング・シェイブクリーム</h1>
                   </div>
                   <div class="card-body">
                     <a href="#">
@@ -241,8 +312,8 @@
                     <h6><strong>タイプ：</strong>クリーム</h6>
                   </div>
                 </div>
-              </div>
-              <div class="type col-md-4 col-12">
+              </div> -->
+              <!-- <div class="type col-md-4 col-12">
                 <div class="item card">
                   <div class="card-title">
                     <h1>リペアリング・アフターシェイブバーム</h1>
@@ -257,8 +328,8 @@
                     <h6><strong>タイプ：</strong>クリーム</h6>
                   </div>
                 </div>
-              </div>
-              <div class="type col-md-4 col-12">
+              </div> -->
+              <!-- <div class="type col-md-4 col-12">
                 <div class="item card">
                   <div class="card-title">
                     <h1>リップ＆ビアード・サルブ</h1>
@@ -273,7 +344,7 @@
                     <h6><strong>タイプ：</strong>クリーム</h6>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

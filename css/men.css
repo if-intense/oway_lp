@@ -2,24 +2,46 @@
 
 body {
   font-family: "Montserrat", "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", sans-serif;
-  /*background: red;*/
-  background:url('../image/bg05.jpg');
-   background-position: center;
-   background-size: cover;
+  background:url('../image/bg05.jpg')  no-repeat;
+  background-position: center;
+  background-size: cover;
+  height:100%;
+}
+
+.br_1024 {
+  display: none;
+}
+
+.tablet-768-only {
+  display:none;
+}
+
+.on-until-768 {
+  display:block;
+}
+
+.br_on, .br_on_tablet, .br_on_md {
+  display:none;
 }
 
 #wrapper {
+padding-bottom:20vh;
 
-  height:100vh;
 }
 
-#wrapper h2.question {
-  text-align:center;
-  text-decoration: underline;
-  margin:4vh auto;
+#wrapper .question {
+  margin-top:10vh;
+  margin-bottom:2vh;
 }
 
-#wrapper ul.select {
+#wrapper .question h2 span{
+  background: black;
+  padding: 5px 10px;
+  color:white;
+  font-size:14px;
+}
+
+/*#wrapper ul.select {
   margin:20px auto;
   width:100%;
 }
@@ -27,10 +49,12 @@ body {
 #wrapper ul.select li {
   display: inline-block;
   padding-right:20px;
-}
+}*/
 
 .section {
   display: none;
+  padding-bottom:40px;
+  margin-top:40px;
 }
 
 .section h2 {
@@ -83,65 +107,64 @@ body {
   background: blue;
 } */
 
+.card-group > .card {
+  margin:10px;
+}
 
-/*radio button*/
- .radiobtn {
-   position: relative;
-   display: block;
-   width:50%;
-   margin:0 auto;
-   color: white;
+.card h5 {
+  font-size:1em;
+  font-weight:bold;
+  text-decoration: underline;
+  height:5vh;
 }
- .radiobtn label {
-   display: block;
-   background: #9a9a9a;
-   color: #fff;
-   border-radius: 5px;
-   padding: 10px 20px;
-   border: 2px solid #000;
-   margin-bottom: 5px;
-   cursor: pointer;
+
+.card .card-body p.card-text  {
+  font-size:0.7em;
+  word-break: break-word;
+  height:5vh;
 }
- .radiobtn label:after, .radiobtn label:before {
-   content: "";
-   position: absolute;
-   right: 11px;
-   top: 11px;
-   width: 20px;
-   height: 20px;
-   border-radius: 3px;
-   background: #DEDFE0;
+
+.card .card-footer .text-muted {
+  font-size:0.7em;
 }
- .radiobtn label:before {
-   background: transparent;
-   transition: 0.1s width cubic-bezier(0.075, 0.82, 0.165, 1) 0s, 0.3s height cubic-bezier(0.075, 0.82, 0.165, 2) 0.1s;
-   z-index: 2;
-   overflow: hidden;
-   background-repeat: no-repeat;
-   background-size: 13px;
-   background-position: center;
-   width: 0;
-   height: 0;
-   background-image: url('../image/check-mark.svg');
+
+
+.mens-product-select select {
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  font-size:16px;
+  padding: 12px;
+  width: 100%;
+  /*margin:0 auto;*/
+  border: 1px solid rgba(255,255,255,0.5);
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
 }
- .radiobtn input[type="radio"] {
-   display: none;
-   position: absolute;
-   width: 100%;
-   appearance: none;
+
+.mens-product-select::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
 }
- .radiobtn input[type="radio"]:checked + label {
-   background: #58585A;
-   animation-name: blink;
-   animation-duration: 1s;
-   border-color: #000;
+
+.mens-product-select:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
 }
- .radiobtn input[type="radio"]:checked + label:after {
-   background: #58585A;
-}
- .radiobtn input[type="radio"]:checked + label:before {
-   width: 20px;
-   height: 20px;
+
+.mens-product-select select option {
+  padding: 30px;
 }
  @keyframes blink {
    0% {
@@ -173,14 +196,72 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .radiobtn {
-    width: 80%;
+@media screen and (max-width:1024px) {
+
+}
+
+
+@media screen and (max-width: 992px) {
+  .br_on_md {
+    display: block;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .radiobtn {
-    width:90%;
+@media screen and (max-width: 768px) {
+
+  .on-until-768 {
+    display:none;
+  }
+
+  .tablet-768-only {
+    display:block;
+  }
+
+  .br_on_tablet {
+    display:block;
+  }
+  .br_on_md {
+    display: none;
+  }
+
+  .card .card-body .card-title {
+    font-size:0.9em;
+  }
+
+  .card .card-body p.card-text {
+    height: 4vh;
+    font-size:0.8em;
+  }
+
+  .card .card-footer .text-muted {
+    font-size:0.6em;
+  }
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .br_on_tablet {
+    display:none;
+  }
+
+  .section {
+    padding:1vh 30px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+
+
+  .br_on {
+    display:block;
+  }
+
+  .section {
+    padding:1vh 30px;
+  }
+
+  .card .card-body p.card-text {
+    height: 4vh;
+    font-size:0.8em;
   }
 }

@@ -46,6 +46,10 @@
 <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <script>
@@ -69,6 +73,54 @@ $(document).ready(function(){
 });
 </script>
 
+<script>
+  $(document).ready(function(){
+    $(".drop-down-select select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".box").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".box").hide();
+            }
+        });
+    }).change();
+});
+</script>
+
+
+<script>
+  $(document).ready(function(){
+    $(".category-select select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".section").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".section").hide();
+            }
+        });
+    }).change();
+});
+</script>
+
+<script>
+  $(document).ready(function(){
+    $(".type-select select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".section01").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".section01").hide();
+            }
+        });
+    }).change();
+});
+</script>
 </head>
 
 
@@ -78,454 +130,556 @@ $(document).ready(function(){
 
 
       <div id="wrapper">
+        <div>
         <nav class="navbar sticky-top navbar-light bg-light">
           <a href="index.html">
           <img src="image/logo.png" alt="IFing Beauty Logo" class="logo">
-          <!-- IFing Beauty Online -->
           </a>
         </nav>
+        </div>
         <!-- container-fluid -->
         <div class="container-fluid">
 
-          <h2 class="title">OWAY スタイリング</h2>
-          <div class="p-5 rounded shadow mb-5 my-auto tabbed">
-            <!-- Lined tabs-->
-            <ul id="myTab2" role="tablist" class="nav nav-tabs nav-pills with-arrow lined flex-column flex-sm-row text-center">
-              <li class="nav-item flex-sm-fill">
-                <a id="home2-tab" data-toggle="tab" href="#home2" role="tab" aria-controls="home2" aria-selected="true" class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0 active">デザインに合わせて選ぶ</a>
-              </li>
-              <li class="nav-item flex-sm-fill">
-                <a id="profile2-tab" data-toggle="tab" href="#profile2" role="tab" aria-controls="profile2" aria-selected="false" class="nav-link text-uppercase font-weight-bold mr-sm-3 rounded-0">タイプで選ぶ</a>
-              </li>
-            </ul>
 
-            <div id="myTab2Content" class="tab-content">
-              <div id="home2" role="tabpanel" aria-labelledby="home-tab" class="tab-pane fade px-4 py-5 show active">
-                <!-- section -->
-                <div class="style_sect01 row">
-                  <div class="left-sect col-lg-3">
-                    <div class="left-inner">
-                      <h6>ご希望のデザインを選択してください。</h6>
-                      <!-- <ul class="select">
-                        <li><label><input type="radio" name="selection" value="soft" checked="checked">　ソフト</label></li>
-                        <li><label><input type="radio" name="selection" value="rough">　ラフ</label></li>
-                        <li><label><input type="radio" name="selection" value="hard">　ハード</label></li>
-                        <li><label><input type="radio" name="selection" value="gloss">　グロス</label></li>
-                      </ul> -->
 
-                      <div class="radiobtn">
-                        <input type="radio" id="soft"
-                               name="drone" value="soft" checked />
-                        <label for="soft">ソフト</label>
-                      </div>
+          <h2 class="title">オーウェイ スタイリング</h2>
+            <div class="col-lg-4 offset-lg-4 col-md-8 offset-md-2 drop-down-text">
+              <p><span>デザインまたはタイプで選択 <i class="fas fa-arrow-circle-down"></i></span></p>
+            </div>
 
-                      <div class="radiobtn">
-                        <input type="radio" id="rough"
-                               name="drone" value="rough" />
-                        <label for="rough">ラフ</label>
-                      </div>
+            <div class="col-lg-4 offset-lg-4 col-md-8 offset-md-2 drop-down-select">
+            <select>
+                <option value="design">デザイン</option>
+                <option value="type">タイプ</option>
+            </select>
+            </div>
 
-                      <div class="radiobtn">
-                        <input type="radio" id="hard"
-                               name="drone" value="hard" />
-                        <label for="hard">ハード</label>
-                      </div>
+            <div class="col-lg-4 offset-lg-4 col-md-8 offset-md-2 category-text">
+              <h6><span>ご希望のデザインを選択してください <i class="fas fa-arrow-circle-down"></i></span></h6>
+            </div>
 
-                      <div class="radiobtn">
-                        <input type="radio" id="gloss"
-                               name="drone" value="gloss" />
-                        <label for="gloss">グロス</label>
-                      </div>
-                    </div>
+
+
+            <div class="design box">
+
+              <div class="col-md-4 offset-md-4 category-select">
+
+                <!-- <div class="left-inner">
+
+                  <div class="radiobtn">
+                    <input type="radio" id="soft"
+                           name="drone" value="soft" checked />
+                    <label for="soft">ソフト</label>
                   </div>
-                  <div class="soft section h-100 col-lg-9">
-                    <h2>ソフト</h2>
-                    <h4><strong>デザインの特徴：</strong>セット力はほぼ無し。束感メイク</h4>
-                      <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>プレシャスワックス</h2>
-                              <h3>Precious Wax</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine007_precious_wax.jpg" alt="プレシャスワックス" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>シャビー・マッド</h2>
-                              <h3>Shabby Mud</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine011_shabby_mud.jpg" alt="シャビー・マッド" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                  <div class="radiobtn">
+                    <input type="radio" id="rough"
+                           name="drone" value="rough" />
+                    <label for="rough">ラフ</label>
                   </div>
-                  <div class="rough section h-100 col-lg-9">
-                    <h2>ラフ</h2>
-                    <h4><strong>デザインの特徴：</strong>程よいセット力・無造作ヘア</h4>
-                      <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>ボーホ・ポマード</h2>
-                              <h3>Boho Pomade</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine001_boho_pomade.jpg" alt="ボーホ・ポマード" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>フラックスポーション</h2>
-                              <h3>Flux Potion</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine002_flux_potion.jpg" alt="フラックスポーション" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>シーソルト・スプレイ</h2>
-                              <h3>Sea Salt Spray</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine010_sea_salt_spray.jpg" alt="シーソルト・スプレイ" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>サーマルプロテクター</h2>
-                              <h3>Thermal Protector</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine013_thermal_protector.jpg" alt="サーマルプロテクター" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                  <div class="radiobtn">
+                    <input type="radio" id="hard"
+                           name="drone" value="hard" />
+                    <label for="hard">ハード</label>
                   </div>
-                  <div class="hard section h-100 col-lg-9">
-                    <h2>ハード</h2>
-                    <h4><strong>デザインの特徴：</strong>ハードなセット力・スタイルキープ</h4>
-                    <div class="row justify-content-center">
-                      <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card infine">
-                          <div class="card-title">
-                            <h2>シェイピング・パティ</h2>
-                            <h3>Shaping Putty</h3>
-                          </div>
-                          <div class="card-body">
-                            <img src="image/infine/infine012_shaping_putty.jpg" alt="シェイピング・パティ" class="img-fluid">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card infine">
-                          <div class="card-title">
-                            <h2>スカルプティング・ミスト</h2>
-                            <h3>Sculpting Mist</h3>
-                          </div>
-                          <div class="card-body">
-                            <img src="image/infine/infine009_sculpting_mist.jpg" alt="スカルプティング・ミスト" class="img-fluid">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card infine">
-                          <div class="card-title">
-                            <h2>フローズン・グレイズ</h2>
-                            <h3>Frozen Glaze</h3>
-                          </div>
-                          <div class="card-body">
-                            <img src="image/infine/infine003_frozen_glaze.jpg" alt="フローズン・グレイズ" class="img-fluid">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="radiobtn">
+                    <input type="radio" id="gloss"
+                           name="drone" value="gloss" />
+                    <label for="gloss">グロス</label>
                   </div>
-                  <div class="gloss section h-100 col-lg-9">
-                    <h2>グロス</h2>
-                    <h4><strong>デザインの特徴：</strong>艶を与える</h4>
-                      <div class="row justify-content-center">
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>ニューチュアリング・ドロップ</h2>
-                              <h3>Nuturing Drop</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine006_nurturing_drops.jpg" alt="ニューチュアリング・ドロップ" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>グロッシー・ネクター</h2>
-                              <h3>Glossy Nectar</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine005_glossy_nectar.jpg" alt="グロッシー・ネクター" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>グラムシャインクラウド</h2>
-                              <h3>Glamshine Cloud</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine004_glamshine_cloud.jpg" alt="グラムシャインクラウド" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <!-- //section -->
+                </div> -->
+                <select>
+                  <option value="soft">ソフト</option>
+                  <option value="rough">ラフ</option>
+                  <option value="hard">ハード</option>
+                  <option value="gloss">グロス</option>
+                </select>
               </div>
-              <div id="profile2" role="tabpanel" aria-labelledby="profile-tab" class="tab-pane fade px-4 py-5">
-                <!-- section -->
-                <div class="style_sect01 row">
-                  <div class="left-sect col-lg-3">
-                    <div class="left-inner">
-                  <h2>タイプで選ぶ</h2>
-                  <!-- <ul class="choose_type">
-                    <li><label><input type="radio" name="selection" value="balm">　バーム</label></li>
-                    <li><label><input type="radio" name="selection" value="wax">　ワックス</label></li>
-                    <li><label><input type="radio" name="selection" value="gel">　ジェル</label></li>
-                    <li><label><input type="radio" name="selection" value="oil">　オイル</label></li>
-                    <li><label><input type="radio" name="selection" value="mist">　ミスト</label></li>
-                    <li><label><input type="radio" name="selection" value="pomade">　ポマード</label></li>
-                  </ul> -->
 
-                    <div class="radiobtn-type">
-                      <input type="radio" id="balm"
-                             name="type" value="balm" checked />
-                      <label for="balm">バーム</label>
-                    </div>
-
-                    <div class="radiobtn-type">
-                      <input type="radio" id="wax"
-                             name="type" value="wax" />
-                      <label for="wax">ワックス</label>
-                    </div>
-
-                    <div class="radiobtn-type">
-                      <input type="radio" id="gel"
-                             name="type" value="gel" />
-                      <label for="gel">ジェル</label>
-                    </div>
-
-                    <div class="radiobtn-type">
-                      <input type="radio" id="oil"
-                             name="type" value="oil" />
-                      <label for="oil">オイル</label>
-                    </div>
-
-                    <div class="radiobtn-type">
-                      <input type="radio" id="mist"
-                             name="type" value="mist" />
-                      <label for="mist">ミスト</label>
-                    </div>
-
-                    <div class="radiobtn-type">
-                      <input type="radio" id="pomade"
-                             name="type" value="pomade" />
-                      <label for="pomade">ポマード</label>
-                    </div>
-                  </div>
-                  </div>
-                  <div class="balm section01 h-100 col-lg-9">
-                    <h2>バーム</h2>
-                    <h4><strong>デザインの特徴：</strong>ヘアだけでなく、ハンドにもリップにも使用可</h4>
-                    <div class="row justify-content-center">
-                      <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card infine">
-                          <div class="card-title">
-                            <h2>プレシャスワックス</h2>
-                            <h3>Precious Wax</h3>
-                          </div>
-                          <div class="card-body">
+              <div class="soft section h-100 col-lg-12">
+                <div class="col-lg-4 offset-lg-4 col-md-6 col-md-3 description-text">
+                  <h3>デザインの特徴：</h3>
+                  <p class="p-space-bottom">セット力はほぼ無し。束感メイク</p>
+                  <p class="p-footer">画像をクリックすると商品ページへ飛びます</p>
+                </div>
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                      <div class="card infine">
+                        <div class="card-title">
+                          <h2>プレシャスワックス</h2>
+                          <h3>Precious Wax</h3>
+                        </div>
+                        <div class="card-body">
+                          <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-precious-wax">
                             <img src="image/infine/infine007_precious_wax.jpg" alt="プレシャスワックス" class="img-fluid">
-                          </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                      <div class="card infine">
+                        <div class="card-title">
+                          <h2>シャビー・マッド</h2>
+                          <h3>Shabby Mud</h3>
+                        </div>
+                        <div class="card-body">
+                          <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-shabby-mud">
+                          <img src="image/infine/infine011_shabby_mud.jpg" alt="シャビー・マッド" class="img-fluid">
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="wax section01 h-100 col-lg-9">
-                    <h2>ワックス</h2>
-                    <h4><strong>デザインの特徴：</strong>クレイ・ファイバー・ペーストの3種類</h4>
-                    <div class="row justify-content-center">
-                      <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card infine">
-                          <div class="card-title">
-                            <h2>クイック・グルー</h2>
-                            <h3>Quick Glue</h3>
-                          </div>
-                          <div class="card-body">
-                            <img src="image/infine/infine008_quick_glue.jpg" alt="クイック・グルー" class="img-fluid">
-                          </div>
+              </div>
+
+              <div class="rough section h-100 col-lg-12">
+                <div class="col-lg-4 offset-lg-4 col-md-6 col-md-3 description-text">
+                  <h3>デザインの特徴：</h3>
+                  <p class="p-space-bottom">程よいセット力・無造作ヘア</p>
+                  <p class="p-footer">画像をクリックすると商品ページへ飛びます</p>
+                </div>
+                  <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                      <div class="card infine">
+                        <div class="card-title">
+                          <h2>ボーホ・ポマード</h2>
+                          <h3>Boho Pomade</h3>
                         </div>
-                      </div>
-                      <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card infine">
-                          <div class="card-title">
-                            <h2>シャビー・マッド</h2>
-                            <h3>Shabby Mud</h3>
-                          </div>
-                          <div class="card-body">
-                            <img src="image/infine/infine011_shabby_mud.jpg" alt="シャビー・マッド" class="img-fluid">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card infine">
-                          <div class="card-title">
-                            <h2>ボーホ・ポマード</h2>
-                            <h3>Boho Pomade</h3>
-                          </div>
-                          <div class="card-body">
+                        <div class="card-body">
+                          <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-boho-pomade">
                             <img src="image/infine/infine001_boho_pomade.jpg" alt="ボーホ・ポマード" class="img-fluid">
-                          </div>
+                          </a>
                         </div>
                       </div>
-                      <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card infine">
-                          <div class="card-title">
-                            <h2>シェイピング・パティ</h2>
-                            <h3>Shaping Putty</h3>
-                          </div>
-                          <div class="card-body">
-                            <img src="image/infine/infine012_shaping_putty.jpg" alt="シェイピング・パティ" class="img-fluid">
-                          </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                      <div class="card infine">
+                        <div class="card-title">
+                          <h2>フラックスポーション</h2>
+                          <h3>Flux Potion</h3>
+                        </div>
+                        <div class="card-body">
+                          <img src="image/infine/infine002_flux_potion.jpg" alt="フラックスポーション" class="img-fluid">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                      <div class="card infine">
+                        <div class="card-title">
+                          <h2>シーソルト・スプレイ</h2>
+                          <h3>Sea Salt Spray</h3>
+                        </div>
+                        <div class="card-body">
+                          <img src="image/infine/infine010_sea_salt_spray.jpg" alt="シーソルト・スプレイ" class="img-fluid">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                      <div class="card infine">
+                        <div class="card-title">
+                          <h2>サーマルプロテクター</h2>
+                          <h3>Thermal Protector</h3>
+                        </div>
+                        <div class="card-body">
+                          <img src="image/infine/infine013_thermal_protector.jpg" alt="サーマルプロテクター" class="img-fluid">
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="gel section01 h-100 col-lg-9">
-                    <h2>ジェル</h2>
-                    <h4><strong>デザインの特徴：</strong>ウェットでもドライでも対応可</h4>
-                    <div class="row justify-content-center">
-                      <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card infine">
-                          <div class="card-title">
-                            <h2>フローズン・グレイズ</h2>
-                            <h3>Frozen Glaze</h3>
-                          </div>
-                          <div class="card-body">
-                            <img src="image/infine/infine003_frozen_glaze.jpg" alt="フローズン・グレイズ" class="img-fluid">
-                          </div>
-                        </div>
+              </div>
+
+              <div class="hard section h-100 col-lg-12">
+                <div class="col-lg-4 offset-lg-4 col-md-6 col-md-3 description-text">
+                  <h3>デザインの特徴：</h3>
+                  <p class="p-space-bottom">ハードなセット力・スタイルキープ</p>
+                  <p class="p-footer">画像をクリックすると商品ページへ飛びます</p>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card infine">
+                      <div class="card-title">
+                        <h2>シェイピング・パティ</h2>
+                        <h3>Shaping Putty</h3>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-shaping-putty">
+                          <img src="image/infine/infine012_shaping_putty.jpg" alt="シェイピング・パティ" class="img-fluid">
+                        </a>
                       </div>
                     </div>
                   </div>
-                  <div class="oil section01 h-100 col-lg-9">
-                    <h2>オイル</h2>
-                    <h4><strong>デザインの特徴：</strong>ツヤと保湿に最適</h4>
-                      <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>ニューチュアリング・ドロップ</h2>
-                              <h3>Nuturing Drop</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine006_nurturing_drops.jpg" alt="ニューチュアリング・ドロップ" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>グロッシーネクター</h2>
-                              <h3>Glossy Nectar</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine005_glossy_nectar.jpg" alt="グロッシーネクター" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card infine">
+                      <div class="card-title">
+                        <h2>スカルプティング・ミスト</h2>
+                        <h3>Sculpting Mist</h3>
                       </div>
-                  </div>
-                  <div class="mist section01 h-100 col-lg-9">
-                    <h2>ミスト</h2>
-                    <h4><strong>デザインの特徴：</strong>エアゾールを使わないオーガニックミスト</h4>
-                      <div class="row justify-content-center">
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>グラムシャイン・クラウド</h2>
-                              <h3>Glamshine Cloud</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine004_glamshine_cloud.jpg" alt="グラムシャイン・クラウド" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>スカルプティング・ミスト</h2>
-                              <h3>Sculpting Mist</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine009_sculpting_mist.jpg" alt="スカルプティング・ミスト" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                          <div class="card infine">
-                            <div class="card-title">
-                              <h2>シーソルト・スプレー</h2>
-                              <h3>Sea Salt Spray</h3>
-                            </div>
-                            <div class="card-body">
-                              <img src="image/infine/infine010_sea_salt_spray.jpg" alt="シーソルト・スプレー" class="img-fluid">
-                            </div>
-                          </div>
-                        </div>
+                      <div class="card-body">
+                        <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-sculpting-mist">
+                          <img src="image/infine/infine009_sculpting_mist.jpg" alt="スカルプティング・ミスト" class="img-fluid">
+                        </a>
                       </div>
+                    </div>
                   </div>
-                  <div class="pomade section01 h-100 col-lg-9">
-                    <h2>ポマード</h2>
-                    <h4><strong>デザインの特徴：</strong>セット力はほぼ無し。束感メイク</h4>
-                    <div class="row justify-content-center">
-                      <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card infine">
-                          <div class="card-title">
-                            <h2>フラックス・ポーション</h2>
-                            <h3>Flux Potion</h3>
-                          </div>
-                          <div class="card-body">
-                            <img src="image/infine/infine002_flux_potion.jpg" alt="フラックス・ポーション" class="img-fluid">
-                          </div>
-                        </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card infine">
+                      <div class="card-title">
+                        <h2>フローズン・グレイズ</h2>
+                        <h3>Frozen Glaze</h3>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-frozen-glaze">
+                          <img src="image/infine/infine003_frozen_glaze.jpg" alt="フローズン・グレイズ" class="img-fluid">
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- //section -->
+              </div>
+
+              <div class="gloss section h-100 col-lg-12">
+                <div class="col-lg-4 offset-lg-4 col-md-6 col-md-3 description-text">
+                  <h3>デザインの特徴：</h3>
+                  <p class="p-space-bottom">艶を与える</p>
+                  <p class="p-footer">画像をクリックすると商品ページへ飛びます</p>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-sm-6 col-md-6 col-lg-3">
+                    <div class="card infine">
+                      <div class="card-title">
+                        <h2>ニューチュアリング・ドロップス</h2>
+                        <h3>Nuturing Drops</h3>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-nurturing-drops">
+                          <img src="image/infine/infine006_nurturing_drops.jpg" alt="ニューチュアリング・ドロップ" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-3">
+                    <div class="card infine">
+                      <div class="card-title">
+                        <h2>グロッシー・ネクター</h2>
+                        <h3>Glossy Nectar</h3>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-glossy-nectar">
+                          <img src="image/infine/infine005_glossy_nectar.jpg" alt="グロッシー・ネクター" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-3">
+                    <div class="card infine">
+                      <div class="card-title">
+                        <h2>グラムシャイン・クラウド</h2>
+                        <h3>Glamshine Cloud</h3>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-glamshine-cloud">
+                          <img src="image/infine/infine004_glamshine_cloud.jpg" alt="グラムシャインクラウド" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- End lined tabs -->
-          </div>
+
+            <div class="type box">
+              <div class="col-lg-4 offset-lg-4 col-md-6 offset-md-3 type-select">
+
+                <!-- <div class="radiobtn-type">
+                  <input type="radio" id="balm" name="type" value="balm" checked />
+                  <label for="balm">バーム</label>
+                </div>
+
+                <div class="radiobtn-type">
+                  <input type="radio" id="wax" name="type" value="wax" />
+                  <label for="wax">ワックス</label>
+                </div>
+
+                <div class="radiobtn-type">
+                  <input type="radio" id="gel" name="type" value="gel" />
+                  <label for="gel">ジェル</label>
+                </div>
+
+                <div class="radiobtn-type">
+                  <input type="radio" id="oil" name="type" value="oil" />
+                  <label for="oil">オイル</label>
+                </div>
+
+                <div class="radiobtn-type">
+                  <input type="radio" id="mist" name="type" value="mist" />
+                  <label for="mist">ミスト</label>
+                </div>
+
+                <div class="radiobtn-type">
+                  <input type="radio" id="pomade" name="type" value="pomade" />
+                  <label for="pomade">ポマード</label>
+                </div> -->
+                <select>
+                  <option value="balm">バーム</option>
+                  <option value="wax">ワックス</option>
+                  <option value="gel">ジェル</option>
+                  <option value="oil">オイル</option>
+                  <option value="mist">ミスト</option>
+                  <option value="pomade">ポマード</option>
+                </select>
+              </div>
+
+
+
+            <!-- バーム　balm -->
+            <div class="balm section01 h-100 col-lg-12">
+              <div class="col-lg-4 offset-lg-4 col-md-6 col-md-3 description-text">
+              <!-- <h4><span><strong>デザインの特徴：</strong><br></span></h4> -->
+                <h3>デザインの特徴：</h3>
+                <p class="p-space-bottom">ヘアだけでなく、ハンドにもリップにも使用可</p>
+                <p class="p-footer">画像をクリックすると商品ページへ飛びます</p>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div class="card infine">
+                    <div class="card-title">
+                      <h2>プレシャスワックス</h2>
+                      <h3>Precious Wax</h3>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-precious-wax">
+                        <img src="image/infine/infine007_precious_wax.jpg" alt="プレシャスワックス" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ワックス　Wax -->
+            <div class="wax section01 h-100 col-lg-12">
+              <div class="col-lg-4 offset-lg-4 col-md-6 col-md-3 description-text">
+                <!-- <h4><span><strong>デザインの特徴：</strong><br>クレイ・ファイバー・ペーストの3種類</span></h4> -->
+                <h3>デザインの特徴：</h3>
+                <p class="p-space-bottom">クレイ・ファイバー・ペーストの3種類</p>
+                <p class="p-footer">画像をクリックすると商品ページへ飛びます</p>
+              </div>
+              <div class="row justify-content-center">
+
+                <!-- クイック・グルー -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div class="card infine">
+                    <div class="card-title">
+                      <h2>クイック・グルー</h2>
+                      <h3>Quick Glue</h3>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-quick-glue">
+                        <img src="image/infine/infine008_quick_glue.jpg" alt="クイック・グルー" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- シャビー・マッド -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div class="card infine">
+                    <div class="card-title">
+                      <h2>シャビー・マッド</h2>
+                      <h3>Shabby Mud</h3>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-shabby-mud">
+                      <img src="image/infine/infine011_shabby_mud.jpg" alt="シャビー・マッド" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ボーホ・ポマード -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div class="card infine">
+                    <div class="card-title">
+                      <h2>ボーホ・ポマード</h2>
+                      <h3>Boho Pomade</h3>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-boho-pomade">
+                        <img src="image/infine/infine001_boho_pomade.jpg" alt="ボーホ・ポマード" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- シェイピング・パティ -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div class="card infine">
+                    <div class="card-title">
+                      <h2>シェイピング・パティ</h2>
+                      <h3>Shaping Putty</h3>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-shaping-putty">
+                        <img src="image/infine/infine012_shaping_putty.jpg" alt="シェイピング・パティ" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ジェル gel -->
+            <div class="gel section01 h-100 col-lg-12">
+              <div class="col-lg-4 offset-lg-4 col-md-6 col-md-3 description-text">
+                <!-- <h4><span><strong>デザインの特徴：</strong><br>ウェットでもドライでも対応可</span></h4> -->
+                <h3>デザインの特徴：</h3>
+                <p class="p-space-bottom">ウェットでもドライでも対応可</p>
+                <p class="p-footer">画像をクリックすると商品ページへ飛びます</p>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div class="card infine">
+                    <div class="card-title">
+                      <h2>フローズン・グレイズ</h2>
+                      <h3>Frozen Glaze</h3>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-frozen-glaze">
+                        <img src="image/infine/infine003_frozen_glaze.jpg" alt="フローズン・グレイズ" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- オイル oil -->
+            <div class="oil section01 h-100 col-lg-12">
+              <div class="col-lg-4 offset-lg-4 col-md-6 col-md-3 description-text">
+                <!-- <h4><span><strong></strong><br></span></h4> -->
+                <h3>デザインの特徴：</h3>
+                <p class="p-space-bottom">ツヤと保湿に最適</p>
+                <p class="p-footer">画像をクリックすると商品ページへ飛びます</p>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div class="card infine">
+                    <div class="card-title">
+                      <h2>ニューチュアリング・ドロップ</h2>
+                      <h3>Nuturing Drop</h3>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-nurturing-drops">
+                        <img src="image/infine/infine006_nurturing_drops.jpg" alt="ニューチュアリング・ドロップ" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div class="card infine">
+                    <div class="card-title">
+                      <h2>グロッシーネクター</h2>
+                      <h3>Glossy Nectar</h3>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-glossy-nectar">
+                        <img src="image/infine/infine005_glossy_nectar.jpg" alt="グロッシーネクター" class="img-fluid">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ミスト mist -->
+            <div class="mist section01 h-100 col-lg-12">
+              <div class="col-lg-4 offset-lg-4 col-md-6 col-md-3 description-text">
+                <!-- <h4><span><strong>デザインの特徴：</strong><br>エアゾールを使わないオーガニックミスト</span></h4> -->
+                <h3>デザインの特徴：</h3>
+                <p class="p-space-bottom">エアゾールを使わないオーガニックミスト</p>
+                <p class="p-footer">画像をクリックすると商品ページへ飛びます</p>
+              </div>
+                <div class="row justify-content-center">
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card infine">
+                      <div class="card-title">
+                        <h2>グラムシャイン・クラウド</h2>
+                        <h3>Glamshine Cloud</h3>
+                      </div>
+                      <div class="card-body">
+                        <img src="image/infine/infine004_glamshine_cloud.jpg" alt="グラムシャイン・クラウド" class="img-fluid">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card infine">
+                      <div class="card-title">
+                        <h2>スカルプティング・ミスト</h2>
+                        <h3>Sculpting Mist</h3>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-glamshine-cloud">
+                          <img src="image/infine/infine009_sculpting_mist.jpg" alt="スカルプティング・ミスト" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card infine">
+                      <div class="card-title">
+                        <h2>シーソルト・スプレー</h2>
+                        <h3>Sea Salt Spray</h3>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-seasalt-spray">
+                          <img src="image/infine/infine010_sea_salt_spray.jpg" alt="シーソルト・スプレー" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="pomade section01 h-100 col-lg-12">
+              <div class="col-lg-4 offset-lg-4 col-md-6 col-md-3 description-text">
+                <!-- <h4><span><strong>デザインの特徴：</strong><br>セット力はほぼ無し。束感メイク</span></h4> -->
+                <h3>デザインの特徴：</h3>
+                <p class="p-space-bottom">セット力はほぼ無し。束感メイク</p>
+                <p class="p-footer">画像をクリックすると商品ページへ飛びます</p>
+              </div>
+                <div class="row justify-content-center">
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card infine">
+                      <div class="card-title">
+                        <h2>フラックス・ポーション</h2>
+                        <h3>Flux Potion</h3>
+                      </div>
+                      <div class="card-body">
+                        <a href="https://ifing-beauty.com/collections/oway-infine-styling/products/oway-flux-potion">
+                          <img src="image/infine/infine002_flux_potion.jpg" alt="フラックス・ポーション" class="img-fluid">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            </div>
+
+
+
         </div>
         <!-- //container-fluid -->
       </div>
+      <footer class="footer">
+          <p><a href="#">特定商取引法に基づく表示</a></p>
+          <p><a href="#">プライバシーポリシー</a></p>
+          <p><a href="#">利用規約</a></p>
+          <p><a href="#">会社情報</a></p>
+          <p>Copyright © IFING Co., Ltd. All Rights Reserved.</p>
+        <!-- /.footer -->
+      </footer>
     </body>
 
 </html>
