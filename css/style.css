@@ -2,6 +2,10 @@ body {
   background:#000;
 }
 
+.br_on {
+  display: none;
+}
+
 
 .banner {
   height: 100vh;
@@ -74,12 +78,28 @@ body {
 /*section-box*/
 
 .section-box {
-  height: 45vh;
+  height: 40vh;
   padding:20px;
   border:1px solid #333;
   flex-direction: column;
   position:relative;
 }
+
+.section-box .div-header {
+  margin:3vh auto;
+}
+
+.section-box .div-body {
+  padding:0 20px;
+  position:relative;
+}
+
+.section-box p.link_to{
+  position:absolute;
+  right:20px;
+  bottom:40px;
+}
+
 
 .section-box .light-dark{
   position:absolute;
@@ -404,12 +424,24 @@ body {
 }
 
 
+@media screen and (max-width: 992px) {
+  .section-box, .section-box .light-dark {
+    height:50vh;
+  }
+
+
+  .section-box .link_to{
+    position:absolute;
+    bottom:15px;
+  }
+}
+
+
 
  @media screen and (max-width: 768px) {
   .banner .top_text {
     font-size:0.7em;
   }
-
 
   .hair_care, .styling {
     height:40vh;
@@ -432,11 +464,27 @@ body {
   .area_three .ortoficcina img {
     margin:2vh 0;
   }
-
  }
+
+@media screen and (max-width: 575.98px) {
+  .br_on {
+    display: block;
+  }
+
+  .modal-body h5{
+    line-height:1.5em;
+  }
+
+  .modal-body p.modal-text{
+    padding:5px 10px;
+    font-size:0.9em;
+  }
+}
 
 
 @media screen and (max-width: 480px) {
+
+
 
   .logo {
     width:140px;

@@ -238,7 +238,7 @@ body {
   }
 
   #wrapper h2.title {
-    font-size: 24px;
+    font-size:24px;
   }
 
 }
@@ -247,10 +247,6 @@ body {
 @media screen and (max-width: 375px) {
   .drop-down-text p span, .type h6 span, .category-text h6 span {
     font-size:0.8em;
-  }
-
-  #wrapper h2.title {
-    font-size: 28px;
   }
 
 
