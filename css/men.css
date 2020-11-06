@@ -179,11 +179,26 @@ padding-bottom:20vh;
   }
 
   .card h5 {
-  font-size:1em;
-  font-weight:bold;
-  text-decoration: underline;
-  height:7vh;
+    font-size:1em;
+    font-weight:bold;
+    text-decoration: underline;
+    height:7vh;
+  }
+
 }
+
+@media all and (device-width: 834px) and (device-height: 1112px) and (orientation:landscape) {
+
+  .br_on_lg {
+    display: block;
+  }
+
+  .card h5 {
+    font-size:1em;
+    font-weight:bold;
+    text-decoration: underline;
+    height:7vh;
+  }
 
 }
 
