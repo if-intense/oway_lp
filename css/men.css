@@ -20,8 +20,8 @@ body {
   display:none;
 }
 
-.main {
-  padding-bottom:20vh;
+#wrapper {
+  height:100vh;
 }
 
 #wrapper .question {
