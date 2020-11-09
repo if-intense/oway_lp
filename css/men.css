@@ -5,7 +5,8 @@ body {
   background:url('../image/bg05.jpg')  no-repeat;
   background-position: center;
   background-size: cover;
-  height:120%;
+  height:100%;
+  background-attachment: fixed;
 }
 
 .tablet-768-only {
@@ -24,12 +25,12 @@ body {
   height:100vh;
 }
 
-#wrapper .question {
-  margin-top:10vh;
+.main .question {
+  margin-top:5vh;
   margin-bottom:2vh;
 }
 
-#wrapper .question h2 span{
+.main .question h2 span{
   background: black;
   padding: 5px 10px;
   color:white;
@@ -352,6 +353,11 @@ body {
 
   .main {
     padding:30px;
+  }
+
+
+  .main .question h2 span {
+    font-size:12px;
   }
 }
 
