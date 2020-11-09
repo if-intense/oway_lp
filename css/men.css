@@ -5,11 +5,7 @@ body {
   background:url('../image/bg05.jpg')  no-repeat;
   background-position: center;
   background-size: cover;
-  height:100%;
-}
-
-.br_1024 {
-  display: none;
+  height:120%;
 }
 
 .tablet-768-only {
@@ -20,13 +16,12 @@ body {
   display:block;
 }
 
-.br_on, .br_on_tablet, .br_on_md, .br_on_lg {
+.br_on, .br_1024, .br_on_tablet, .br_on_md, .br_on_lg {
   display:none;
 }
 
 #wrapper {
 padding-bottom:20vh;
-
 }
 
 #wrapper .question {
@@ -41,6 +36,15 @@ padding-bottom:20vh;
   font-size:14px;
 }
 
+
+#wrapper .container-fluid {
+  padding:0;
+}
+
+
+.flex-start {
+  justify-content: flex-start;
+}
 /*#wrapper ul.select {
   margin:20px auto;
   width:100%;
@@ -99,34 +103,58 @@ padding-bottom:20vh;
   display: block;
 }
 
-/*.face_body {
-  background: grey;
+.men-product h2 {
+  font-size:20px;
 }
 
-.mouth_beard {
-  background: blue;
-} */
+.men-product h4 {
+  font-size:18px;
+  font-weight:normal;
+  padding-left:10px;
 
-.card-group > .card {
-  margin:10px;
 }
 
-.card h5 {
-  font-size:1em;
-  font-weight:bold;
-  text-decoration: underline;
-  height:5vh;
+
+
+.product {
+  background-color: transparent;
+  /*perspective: 1000px;*/
 }
 
-.card .card-body p.card-text  {
-  font-size:0.7em;
-  word-break: break-word;
-  height:5vh;
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.card .card-footer .text-muted {
-  font-size:0.7em;
+.product:hover .card {
+  transform: rotateY(180deg);
 }
+
+.men-product, .men-product-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.men-product {
+  color: black;
+}
+
+.men-product-inner {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+
 
 
 .mens-product-select select {
@@ -167,8 +195,43 @@ padding-bottom:20vh;
   padding: 30px;
 }
 
-.card-title {
+.card-title h5.double {
   line-height:1.5em;
+}
+
+.footer {
+  background:#1a2228;
+  width:100%;
+  position:absolute;
+}
+
+.footer ul {
+  list-style:none;
+}
+
+
+
+.footer ul li {
+  display: inline-block;
+  padding-right:30px;
+  color:white;
+  font-size:0.8em;
+}
+
+.footer p a, .footer p {
+  color:white;
+  font-size:0.8em;
+  text-align: right;
+  padding-right:30px;
+}
+
+.footer p a {
+  color:white;
+  text-decoration: none;
+}
+
+.footer p a:hover {
+  text-decoration: underline;
 }
 
 
@@ -182,10 +245,35 @@ padding-bottom:20vh;
     font-size:1em;
     font-weight:bold;
     text-decoration: underline;
-    height:7vh;
+    /*height:7vh;*/
   }
 
 }
+
+@media screen and (min-width:1024px) {
+  .br_on_lg {
+    display: none;
+  }
+
+  .br_1024 {
+    display: block;
+  }
+
+  .card h5 {
+    font-size:1em;
+    font-weight:bold;
+    text-decoration: underline;
+    /*height:7vh;*/
+  }
+
+  .card .card-body p.card-text  {
+  font-size:0.7em;
+  word-break: break-word;
+  height:3vh;
+}
+
+}
+
 
 @media all and (device-width: 834px) and (device-height: 1112px) and (orientation:landscape) {
 
@@ -197,7 +285,7 @@ padding-bottom:20vh;
     font-size:1em;
     font-weight:bold;
     text-decoration: underline;
-    height:7vh;
+    /*height:7vh;*/
   }
 
 }
@@ -231,11 +319,11 @@ padding-bottom:20vh;
   }
 
   .card .card-body .card-title {
-    font-size:0.9em;
+    /*font-size:0.9em;*/
   }
 
   .card .card-body p.card-text {
-    height: 4vh;
+    /*height: 4vh;*/
     font-size:0.8em;
   }
 
@@ -250,13 +338,26 @@ padding-bottom:20vh;
     display:none;
   }
 
+
   .section {
     padding:1vh 30px;
   }
+
 }
+
+@media screen and (max-width: 520px) {
+  .container-fluid {
+    padding:0 20px;
+  }
+}
+
+
 
 @media screen and (max-width: 414px) {
 
+  .br_on_tablet {
+    display: none;
+  }
 
   .br_on {
     display:block;
@@ -270,4 +371,12 @@ padding-bottom:20vh;
     height: 4vh;
     font-size:0.8em;
   }
+
+
+}
+
+@media screen and (max-width: 375px) {
+  .card .card-body .card-title {
+    font-size: 0.9em;
+    line-height:1.25em;
 }

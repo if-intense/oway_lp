@@ -44,18 +44,17 @@ body {
   padding-right:20px;
 }
 
-.design {
-  display: block;
-}
 
 .section, .section01 {
-  display: none;
+  /*display: none;*/
+  display: block;
   padding-top:5vh;
 }
 
-.balm, .soft {
-  display: block;
+.soft {
+  display:block;
 }
+
 
 
 .section h2, .section01 h2 {
@@ -220,7 +219,7 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   #wrapper ul.select li, #wrapper ul.choose_type li {
     display:column;
   }

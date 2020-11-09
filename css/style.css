@@ -83,6 +83,7 @@ body {
   border:1px solid #333;
   flex-direction: column;
   position:relative;
+  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
 }
 
 .section-box .div-header {
@@ -423,16 +424,28 @@ body {
   margin:10px auto;
 }
 
+@media screen and (min-width: 1024px) {
+  .section-box, .section-box .light-dark {
+    height:30vh;
+  }
+}
+
 
 @media screen and (max-width: 992px) {
   .section-box, .section-box .light-dark {
-    height:50vh;
+    height:40vh;
   }
 
 
   .section-box .link_to{
     position:absolute;
     bottom:15px;
+  }
+
+  .section-box h2, .section-box h3, .new_section h2, .new_section h3 {
+    text-align: center;
+    color: #fff;
+    font-size:1.25em;
   }
 }
 
@@ -576,6 +589,18 @@ body {
   .area_three .ortoficcina img {
     margin:2vh 0;
   }
+}
 
+ @media screen and (max-width: 414px) {
+  .section-box, .section-box .light-dark {
+    height:35vh;
+  }
+  .section-box p.link_to{
+    position:absolute;
+    bottom:10px;
+    font-size:0.75em;
+  }
 
 }
+
+
