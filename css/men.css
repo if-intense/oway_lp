@@ -20,8 +20,8 @@ body {
   display:none;
 }
 
-#wrapper {
-padding-bottom:20vh;
+.main {
+  padding-bottom:20vh;
 }
 
 #wrapper .question {
@@ -349,6 +349,10 @@ padding-bottom:20vh;
   .container-fluid {
     padding:0 20px;
   }
+
+  .main {
+    padding:30px;
+  }
 }
 
 
@@ -371,6 +375,8 @@ padding-bottom:20vh;
     height: 4vh;
     font-size:0.8em;
   }
+
+
 
 
 }
