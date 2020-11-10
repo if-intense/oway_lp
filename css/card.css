@@ -8,7 +8,7 @@
 /* Flip Cards CSS */
 .card-container {
   display: grid;
-  perspective: 700px;
+  perspective: 100%;
 }
 
 .card-flip {
@@ -44,4 +44,100 @@
 
 .back > .card-block .card-text {
   font-size:0.9em;
+}
+
+.cardbox {
+  position: relative;
+  width: 100%;
+}
+
+.cardbox > .card-inner {
+  background-color:#fff;
+}
+
+.cardbox .card-inner h2 {
+  font-size:1.25em;
+  text-decoration: none;
+}
+
+.cardbox .card-inner h3 {
+  text-decoration: none;
+  font-family: 'DDINRegular';
+  font-size:0.9em;
+  padding-left:10px;
+  word-break: keep-all;
+
+}
+
+.image {
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 95%;
+  margin:0 auto;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,105,105, 0.7);
+
+}
+
+.cardbox:hover .overlay {
+  opacity:1;
+}
+
+.text {
+  color: white;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  padding:0 15px;
+}
+
+
+@media screen and (min-width:980px) and (max-width:1159px){
+  .cardbox .card-inner h2 {
+  font-size:0.9em;
+  text-decoration: none;
+  }
+
+  .overlay .text h3 {
+    font-size:0.8em;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  .cardbox {
+    margin-bottom:3vh;
+  }
+
+  .cardbox .card-inner h2 {
+    font-size:1.4em;
+    text-decoration: none;
+  }
+
+  .cardbox .card-inner h3 {
+    font-size:1.25em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .cardbox .card-inner h2 {
+    font-size:1.2em;
+    text-decoration: none;
+  }
+
+  .cardbox .card-inner h3 {
+    font-size:1em;
+  }
 }
