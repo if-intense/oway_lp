@@ -119,7 +119,7 @@
 
         <script>
           $(document).ready(function(){
-            $("a.next").on('click', function(event) {
+            $(".questionnaire .button").on('click', function(event) {
               if (this.hash !== "") {
                 // Prevent default anchor click behavior
                 event.preventDefault();
@@ -191,7 +191,10 @@
                         </label>
                       </div>
                     </div>
-                    <p><span><a class="next" href="#section2">次へ</a></span></p>
+                    <!-- <p><span><a class="next" href="#section2">次へ</a></span></p> -->
+                    <div class="row justify-content-center">
+                    <a href="#section2" class="button">次へ</a>
+                    </div>
                   </div>
                 </div>
                 <!-- questionnare id=section1 -->
@@ -213,7 +216,10 @@
                         <label for="thin">細い</label>
                       </div>
                     </div>
-                    <p><span><a class="next" href="#section3">次へ</a></span></p>
+                    <!-- <p><span><a class="next" href="#section3">次へ</a></span></p> -->
+                    <div class="row justify-content-center">
+                    <a href="#section3" class="button">次へ</a>
+                    </div>
                   </div>
                 </div>
                 <!-- questionnare id=section2 -->
@@ -233,7 +239,10 @@
                       <li><input type="checkbox" id="checkbox4" value="パーマ"><label for="checkbox4">パーマをしている</label></li>
                       <li><input type="checkbox" id="checkbox5" value="縮毛矯正"><label for="checkbox5">縮毛矯正をしている</label></li>
                     </ul>
-                      <p><span><a class="next" href="#section4">次へ</a></span></p>
+                      <!-- <p><span><a class="next" href="#section4">次へ</a></span></p> -->
+                      <div class="row justify-content-center">
+                      <a href="#section4" class="button">次へ</a>
+                      </div>
                   </div>
                 </div>
                 <!-- questionnare id=section3 -->
@@ -255,8 +264,10 @@
                       <li><input type="checkbox" id="checkbox10" value="紫外線で傷んでいる" class="typeK"><label for="checkbox10">紫外線で傷んでいる</label></li>
                       <li><input type="checkbox" id="checkbox11" value="プールの塩素で髪が傷む" class="typeL"><label for="checkbox11">プールの塩素で髪が傷む</label></li>
                     </ul>
-
-                    <p><span><a class="next" href="#section5">次へ</a></span></p>
+                    <div class="row justify-content-center">
+                    <a href="#section5" class="button">次へ</a>
+                    </div>
+                    <!-- <p><span><a class="next" href="#section5">次へ</a></span></p> -->
                   </div>
                 </div>
                 <!-- questionnare id=section4 -->

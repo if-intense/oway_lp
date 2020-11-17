@@ -9,6 +9,11 @@ body {
   background-attachment: fixed;
 }
 
+.navbar .logo {
+  width: 200px;
+}
+
+
 .tablet-768-only {
   display:none;
 }

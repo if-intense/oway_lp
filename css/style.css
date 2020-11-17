@@ -18,6 +18,15 @@ body {
   background-attachment: fixed;
 }
 
+.navbar .logo {
+  width: 200px;
+}
+
+.top-logo {
+  width:25%;
+  max-width:200px;
+}
+
 
 
 .banner .top_text {

@@ -51,6 +51,18 @@ body {
     font-family: "Cormorant Garamond", sans-serif;
 }
 
+#wrapper .questionnaire .button {
+  padding: 20px 90px;
+    text-align: center;
+    border: 1px solid #404146;
+    border-radius: 20px;
+    background:#404146;
+    box-shadow: 2px 2px 3px #000;
+    margin:auto;
+    color:white;
+    text-decoration: none;
+}
+
 #wrapper .questionnaire .question_title h2 {
     color: #404146;
     font-family: "Montserrat", "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", sans-serif;

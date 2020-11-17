@@ -1,4 +1,15 @@
+body {
+  height:100%;
+}
 
+
+.navbar .logo {
+  width:200px;
+}
+
+.container-fluid {
+  height:100%;
+}
 
 .left-side {
   display:grid;
@@ -16,7 +27,7 @@
 
 .right-side {
   position: relative;
-  background:orange;
+  /*background:orange;*/
   border-left: 5px double #000;
 }
 
@@ -142,6 +153,8 @@ font-weight:normal;
 
   .right-side {
     border-top: 5px double #000;
+    border-left: none;
   }
+
 
 }
