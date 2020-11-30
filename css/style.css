@@ -350,6 +350,11 @@ body {
 
 
 /*modal*/
+.modal {
+  height:95%;
+  max-height:95vh;
+}
+
 .modal-title {
   /*font-family: 'Archivo Black', sans-serif;*/
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -462,11 +467,13 @@ body {
 }
 
 .biodynamic {
-  margin-bottom:4vh;
+  margin-bottom:2vh;
 }
 
-.biodynamic-text, .biodynamic .biodynamic_img {
-  margin-top:4vh;
+.biodynamic-text {
+  margin-top:3vh;
+  height:25%;
+  max-height:200px;
 }
 
 .img-bottom {
@@ -489,9 +496,9 @@ body {
 }
 
 .glass_and_aluminum_text h3 {
-  font-size:34px;
+  font-size:24px;
   font-weight:bold;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .glass_and_aluminum_img {
@@ -621,13 +628,19 @@ margin-top:4vh;
     margin-bottom:3vh;
   }
 
+  .biodynamic .biodynamic_img {
+    margin-bottom:3vh;
+  }
+
 
 }
 
 
 @media screen and (max-width: 480px) {
 
-
+  .tile-wrapper, .purchase {
+    height:45vh;
+  }
 
   .logo {
     width:140px;
