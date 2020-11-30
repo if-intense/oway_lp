@@ -42,16 +42,9 @@ body {
 }
 
 
-
-.new_section {
-  padding:20px;
-  background: #fff;
-}
-
 .hair_care, .styling {
   height:40vh;
   background:#fff;
-
   flex-direction: column;
   padding: 10px 20px;
 }
@@ -62,8 +55,10 @@ body {
 }
 
 
-
-
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 
 .footer {
@@ -88,109 +83,7 @@ body {
 
 
 
-/*section-box*/
 
-.section-box {
-  height: 40vh;
-  padding:20px;
-  border:1px solid #333;
-  flex-direction: column;
-  position:relative;
-  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
-}
-
-.section-box .div-header {
-  margin:3vh auto;
-}
-
-.section-box .div-body {
-  padding:0 20px;
-  position:relative;
-}
-
-.section-box p.link_to{
-  position:absolute;
-  right:20px;
-  bottom:40px;
-}
-
-
-.section-box .light-dark{
-  position:absolute;
-  top:0;
-  left:0;
-  height:45vh;
-}
-
-.section-box p.text {
-  color:white;
- /* display: none;*/
-}
-
-
-.section-box:hover > .light-dark   {
-  background:rgba(0,0,0,0.5);
-  display: block;
-  cursor: pointer;
-}
-
-.section-box h2, .section-box h3, .new_section h2, .new_section h3 {
-  text-align: center;
-  color: #fff;
-}
-
-.section-box h2 {
-  font-family: 'Archivo Black', sans-serif;
-}
-
-
-
-
-
-.section-box p.link_to {
-  text-align: center;
-}
-
-.section-box p.youtube_link {
-  text-align: right;
-
-}
-
-.section-box p.link_to a {
-  color: white;
-  text-decoration:underline;
-}
-
-.section-box p.link_to a:hover {
-  color: yellow;
-  font-weight:bold;
-}
-
-.new_section h2 {
-  font-family: 'Archivo Black', sans-serif;
-  color:black;
-}
-
-.new_section h3 {
-  /*font-family: 'Archivo Black', sans-serif;*/
-  color:black;
-}
-
-.new_section .ecocert {
-  color:rgb(204,28,67);
-}
-
-.new_section .bioagricert {
-  color:rgb(65, 128,60);
-}
-
-.new_section .youtube {
-  text-align: center;
-}
-
-
-
-/*section-box*/
 
 .page-top {
   text-align:right;
@@ -254,28 +147,10 @@ body {
 }
 
 
-/*.area_three .mod_size h2, .area_three .mod_size h3{
-  text-align:center;
-}
-
-.area_three .mod_size h2 {
-  font-family: 'Archivo Black', sans-serif;
-  margin:2vh 0;
-}
-
-.area_three .mod_size h3 {
-  font-weight: bold;
-}*/
-
-.ortoficcina-modal .ortoficcina img {
-  -webkit-filter: drop-shadow(2px 5px 3px #222222);
-  filter: drop-shadow(2px 5px 3px #222222);
-}
-
 .ortoficcina-modal .mod_description {
   padding:10px 20px;
-  border:1px solid #000;
-  margin-top:20px;
+  /*border:1px solid #000;*/
+  margin:4vh auto;
 }
 
 
@@ -283,80 +158,204 @@ body {
 
 /*section-images*/
 .sect001 {
-  background:url('../image/sect-bg/sect001.png');
+  background:url('../image/sect-bg/sect029.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .sect002 {
-  background:url('../image/sect-bg/sect002.png');
+  background:url('../image/sect-bg/sect011.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .sect003 {
-  background:url('../image/sect-bg/sect003.png');
+  background:url('../image/sect-bg/sect019.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .sect004 {
-  background:url('../image/sect-bg/sect004.png');
+  background:url('../image/sect-bg/sect022.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .sect005 {
-  background:url('../image/sect-bg/sect005.png');
+  background:url('../image/sect-bg/sect012.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .sect006 {
-  background:url('../image/sect-bg/sect006.png');
+  background:url('../image/sect-bg/sect018.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .sect007 {
-  background:url('../image/sect-bg/sect007.png');
+  background:url('../image/sect-bg/sect023.xpng');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .sect008 {
-  background:url('../image/sect-bg/sect008.png');
+  background:url('../image/sect-bg/sect026.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .sect009 {
-  background:url('../image/sect-bg/sect009.png');
+  background:url('../image/sect-bg/sect028.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .sect010 {
-  background:url('../image/sect-bg/sect010.png');
+  background:url('../image/sect-bg/sect016.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 
+.tile-wrapper {
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    position: relative;
+    height:35vh;
+    flex-direction: column;
+}
+.link-to-modal {
+    line-height: 0;
+}
+.link-to-modal img.show_modal, .link-to-modal img.purchase-items {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
 
+}
+.link-to-modal:hover img.show_modal { /* this line has been changed */
+    -webkit-transform:scale(1.33); /* Safari and Chrome */
+    -moz-transform:scale(1.33); /* Firefox */
+    -ms-transform:scale(1.33); /* IE 9 */
+    -o-transform:scale(1.33); /* Opera */
+     transform:scale(1.33);
+     -webkit-filter: brightness(50%);
+
+}
+
+
+.link-to-modal:hover:after {
+    opacity:1;
+}
+
+
+.link-to-modal img.show_modal:hover {
+    opacity: 1;
+    background:#000;
+}
+
+.tile-wrapper .text-overlay, .purchase .text-overlay {
+    position: absolute;
+    /*width: 50%;*/
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+}
+
+.tile-wrapper .text-overlay h2 {
+    color: white;
+    font-size: 32px;
+    line-height: 36px;
+    /* margin: 0 0 10px; */
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.tile-wrapper .text-overlay h6 {
+    color: #fff;
+    font-size:24px;
+    font-family:'游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+
+}
+.tile-wrapper .text-overlay p {
+    color: white;
+    font-size: 16px;
+    margin-top:3vh;
+}
+
+
+.purchase {
+  margin:0;
+    padding:0;
+    overflow: hidden;
+    position: relative;
+    height:35vh;
+    flex-direction: column;
+}
+
+.purchase img {
+  object-fit: cover;
+}
+
+.purchase .text-overlay {
+  background:rgba(255,255,255,0.7);
+  width:90%;
+  margin-left:auto;
+  margin-right:auto;
+  color:#000;
+  padding-top:2vh;
+  padding-bottom:2vh;
+}
+
+.purchase .text-overlay h2 {
+  font-family: 'Archivo Black', sans-serif;
+}
+.purchase .text-overlay h6 {
+  font-size:18px;
+  /*font-family:'游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;*/
+}
+
+.purchase .text-overlay p {
+  margin-top:3vh;
+}
+
+.purchase .text-overlay .product_link p{
+  background: rgb(19,38,38);
+  background: linear-gradient(0deg, rgba(19,38,38,1) 0%, rgba(152,149,143,1) 100%);
+  padding:30px 0;
+  text-align: center;
+  color:#fff;
+}
 
 
 /*modal*/
+.modal-title {
+  /*font-family: 'Archivo Black', sans-serif;*/
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-weight:bold;
+}
+
 .modal-body h5{
   text-decoration: underline;
   font-weight:bold;
@@ -366,6 +365,15 @@ body {
 
 .modal-body h4 {
   text-align: center;
+}
+
+.modal-body h3 {
+  font-weight:bold;
+  text-decoration: underline;
+}
+
+.modal-body p {
+  margin-left:20px;
 }
 
 .modal-body p.modal-text{
@@ -431,11 +439,106 @@ body {
   font-weight:bold;
 }
 
-.youtube_modal {
-  background:red;
-  width:90%;
-  margin:10px auto;
+/*agricosmetica*/
+.agricosmetica-text {
+  margin:4vh auto;
 }
+
+.agricostmetica-video {
+  margin-bottom:4vh;
+}
+
+
+/*ortoficcina modal*/
+.ortoficcina-text {
+  margin-bottom:4vh;
+}
+
+/*bio-dynamic modal*/
+.biodynamic .biodynamic_img {
+  object-fit: cover;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+.biodynamic {
+  margin-bottom:4vh;
+}
+
+.biodynamic-text, .biodynamic .biodynamic_img {
+  margin-top:4vh;
+}
+
+.img-bottom {
+  margin-top:4vh;
+}
+
+/*essential oil*/
+.essential-oil-text, .essential-oil-video {
+  margin-top:4vh;
+}
+
+.essential-oil-video {
+  margin-bottom:4vh;
+}
+
+/*glass_and_aluminum*/
+.glass_and_aluminum_text {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  margin-top:4vh;
+}
+
+.glass_and_aluminum_text h3 {
+  font-size:34px;
+  font-weight:bold;
+  text-transform: uppercase;
+}
+
+.glass_and_aluminum_img {
+  margin-top:5vh;
+  margin-bottom:5vh;
+}
+
+/*stay-free*/
+.stayfree_text, .stayfree_img {
+  margin-top:4vh;
+}
+
+/*fair-trade*/
+.fair-trade-img, .fair-trade-text {
+  margin-top: 4vh;
+}
+
+
+/*less-packaging modal*/
+.lessPackaging-text, .lessPackaging-img {
+  margin-top:4vh;
+}
+
+.less_packaging_img {
+  object-fit: cover;
+  margin-bottom: auto;
+  margin-top:auto;
+}
+
+.less_packaging_img img {
+  margin:0 auto;
+}
+
+/*SDGs*/
+.SDGS_text, .SDGS_img {
+margin-top:4vh;
+}
+
+
+/*PETA*/
+.peta-img, .peta-text {
+  margin-top:4vh;
+}
+
+
+
+
 
 @media screen and (min-width: 1024px) {
   .section-box, .section-box .light-dark {
@@ -483,6 +586,10 @@ body {
     margin: 0;
   }
 
+  .glass_and_aluminum_img img {
+    margin-bottom:3vh;
+  }
+
   .area_two {
     padding:0;
   }
@@ -505,6 +612,16 @@ body {
     padding:5px 10px;
     font-size:0.9em;
   }
+
+  .ortoficcina {
+    margin-bottom: 3vh;
+  }
+
+  .less_packaging_img {
+    margin-bottom:3vh;
+  }
+
+
 }
 
 
@@ -525,16 +642,6 @@ body {
   padding:5px 10px;
   font-size:0.55em;
   }
-
-  .section-box {
-  height: 60vh;
-  padding:20px;
-  }
-
-  .section-box p.text {
-    font-size:0.75em;
-  }
-
 
 
   .hair_care, .styling {
