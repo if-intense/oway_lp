@@ -112,120 +112,6 @@ body {
   font-family: 'Archivo Black', sans-serif;
 }
 
-.area_two .hair_care {
-  background:url("../image/product.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.area_two .styling {
-  background:url("../image/infine.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.hair_care .product_details, .styling .product_details {
-  background:rgba(255,255,255,0.56);
-  border:1px solid rgb(112,112,112);
-  font-size: 0.8em;
-  padding:10px;
-}
-
-.hair_care .product_link p, .styling .product_link p{
-  background: rgb(19,38,38);
-  background: linear-gradient(0deg, rgba(19,38,38,1) 0%, rgba(152,149,143,1) 100%);
-  padding:15px 0;
-  text-align: center;
-}
-
-.hair_care .product_link p a, .styling .product_link p a{
-  color:white;
-
-
-}
-
-
-.ortoficcina-modal .mod_description {
-  padding:10px 20px;
-  /*border:1px solid #000;*/
-  margin:4vh auto;
-}
-
-
-/*product_box*/
-
-/*section-images*/
-.sect001 {
-  background:url('../image/sect-bg/sect029.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sect002 {
-  background:url('../image/sect-bg/sect011.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sect003 {
-  background:url('../image/sect-bg/sect019.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sect004 {
-  background:url('../image/sect-bg/sect022.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sect005 {
-  background:url('../image/sect-bg/sect012.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sect006 {
-  background:url('../image/sect-bg/sect018.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sect007 {
-  background:url('../image/sect-bg/sect023.xpng');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sect008 {
-  background:url('../image/sect-bg/sect026.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sect009 {
-  background:url('../image/sect-bg/sect028.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.sect010 {
-  background:url('../image/sect-bg/sect016.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 
 .tile-wrapper {
@@ -294,14 +180,14 @@ body {
 
 .tile-wrapper .text-overlay h6 {
     color: #fff;
-    font-size:24px;
+    font-size:22px;
     font-family:'游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
 
 }
 .tile-wrapper .text-overlay p {
     color: white;
-    font-size: 16px;
-    margin-top:3vh;
+    font-size: 24px;
+    margin-top:5vh;
 }
 
 
@@ -349,11 +235,7 @@ body {
 }
 
 
-/*modal*/
-.modal {
-  height:95%;
-  max-height:95vh;
-}
+/*modal to IFing Beauty & Other Pages イフイングビューティー・他のページへ飛ぶモーダル・ウィンドウ*/
 
 .modal-title {
   /*font-family: 'Archivo Black', sans-serif;*/
@@ -395,22 +277,6 @@ body {
   margin:10px auto;
 }
 
-.options_to_choose .btn {
-  width:100px;
-}
-
-.options_to_choose p {
-  text-align: center;
-}
-
-.options_to_choose p a {
-  background: rgb(68,108,179);
-  background: linear-gradient(0deg, rgba(68,108,179,0.01) 0%, rgba(73,114,182,1) 4%, rgba(192,255,255,1) 100%);
-  text-decoration: underline;
-  color: white;
-  font-weight:bold;
-}
-
 
 .modal-footer a {
   color: white;
@@ -444,20 +310,8 @@ body {
   font-weight:bold;
 }
 
-/*agricosmetica*/
-.agricosmetica-text {
-  margin:4vh auto;
-}
+/*modal to IFing Beauty & Other Pages イフイングビューティー・他のページへ飛ぶモーダル・ウィンドウ*/
 
-.agricostmetica-video {
-  margin-bottom:4vh;
-}
-
-
-/*ortoficcina modal*/
-.ortoficcina-text {
-  margin-bottom:4vh;
-}
 
 /*bio-dynamic modal*/
 .biodynamic .biodynamic_img {
@@ -472,76 +326,13 @@ body {
 
 .biodynamic-text {
   margin-top:3vh;
-  height:25%;
-  max-height:200px;
 }
 
 .img-bottom {
   margin-top:4vh;
 }
 
-/*essential oil*/
-.essential-oil-text, .essential-oil-video {
-  margin-top:4vh;
-}
 
-.essential-oil-video {
-  margin-bottom:4vh;
-}
-
-/*glass_and_aluminum*/
-.glass_and_aluminum_text {
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-  margin-top:4vh;
-}
-
-.glass_and_aluminum_text h3 {
-  font-size:24px;
-  font-weight:bold;
-  /*text-transform: uppercase;*/
-}
-
-.glass_and_aluminum_img {
-  margin-top:5vh;
-  margin-bottom:5vh;
-}
-
-/*stay-free*/
-.stayfree_text, .stayfree_img {
-  margin-top:4vh;
-}
-
-/*fair-trade*/
-.fair-trade-img, .fair-trade-text {
-  margin-top: 4vh;
-}
-
-
-/*less-packaging modal*/
-.lessPackaging-text, .lessPackaging-img {
-  margin-top:4vh;
-}
-
-.less_packaging_img {
-  object-fit: cover;
-  margin-bottom: auto;
-  margin-top:auto;
-}
-
-.less_packaging_img img {
-  margin:0 auto;
-}
-
-/*SDGs*/
-.SDGS_text, .SDGS_img {
-margin-top:4vh;
-}
-
-
-/*PETA*/
-.peta-img, .peta-text {
-  margin-top:4vh;
-}
 
 
 
@@ -555,20 +346,11 @@ margin-top:4vh;
 
 
 @media screen and (max-width: 992px) {
-  .section-box, .section-box .light-dark {
-    height:40vh;
-  }
 
-
-  .section-box .link_to{
-    position:absolute;
-    bottom:15px;
-  }
-
-  .section-box h2, .section-box h3, .new_section h2, .new_section h3 {
-    text-align: center;
-    color: #fff;
-    font-size:1.25em;
+  .tile-wrapper .text-overlay p {
+    color: white;
+    font-size: 20px;
+    margin-top:5vh;
   }
 }
 
@@ -587,23 +369,12 @@ margin-top:4vh;
     font-size:0.7em;
   }
 
-  .section-box, .area_two .styling, .area_two .hair_care {
-    /*max-width: calc(100% - 2em)!important;*/
-    width: 100%;
-    margin: 0;
-  }
 
   .glass_and_aluminum_img img {
     margin-bottom:3vh;
   }
 
-  .area_two {
-    padding:0;
-  }
 
-  .area_three .ortoficcina img {
-    margin:2vh 0;
-  }
  }
 
 @media screen and (max-width: 575.98px) {
@@ -624,9 +395,6 @@ margin-top:4vh;
     margin-bottom: 3vh;
   }
 
-  .less_packaging_img {
-    margin-bottom:3vh;
-  }
 
   .biodynamic .biodynamic_img {
     margin-bottom:3vh;
@@ -677,15 +445,7 @@ margin-top:4vh;
     padding:5px;
   }
 
-  .container-fluid .section-box h2 {
-    font-family: 'Archivo Black', sans-serif;
-    font-size:1.7em;
-  }
 
-  .container-fluid .section-box h3 {
-    font-size:1.2em;
-    font-weight:bold;
-  }
 
   .shop {
     width:127px;
@@ -701,38 +461,14 @@ margin-top:4vh;
     font-size:0.8em;
   }
 
-  .new_section .youtube {
-    text-align:left;
-  }
-
-  .youtube {
-    font-size:0.8em;
-  }
-
-  .new_section .youtube strong {
-    width:300px;
-  }
-
-  .youtube-link {
-    width:120px;
-  }
-
-
-  .area_three .ortoficcina img {
-    margin:2vh 0;
-  }
 }
+
 
  @media screen and (max-width: 414px) {
-  .section-box, .section-box .light-dark {
-    height:35vh;
-  }
-  .section-box p.link_to{
-    position:absolute;
-    bottom:10px;
-    font-size:0.75em;
-  }
 
-}
+
+  .tile-wrapper .text-overlay h2 {
+      font-size:28px;
+  }
 
 
