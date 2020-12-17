@@ -92,11 +92,37 @@ $(document).ready(function(){
         <div class="modal-footer">
           <!-- <a href="enquete.html" class="go_to_enquete_page">いいえ</a> -->
           <a data-dismiss="modal" data-toggle="modal" href="#CategoryModal" class="btn btn-secondary">いいえ</a>
-          <a href="https://ifing-beauty.com/pages/oway-lineup" class="btn btn-primary">はい</a>
+          <a data-dismiss="modal" data-toggle="modal" href="#CounselingModal" class="btn btn-primary">はい</a>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="CounselingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><img src="image/logo.svg" alt="OWAYロゴ" style="width:250px"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="text-align: center;">カウンセリングを希望しますか？　<br>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <div class="row buttons">
+              <a data-dismiss="modal" data-toggle="modal" href="index.html" class="btn btn-primary">いいえ（ホーム画面に戻る）</a>
+              <a href="enquete.html" class="btn btn-secondary">カウンセリングを希望する</a>
+              <a href="https://ifing-beauty.com/products/list?category_id=12" class="btn btn-success">Ifing Beautyのショップページへ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <div class="modal fade" id="CategoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
     <div class="modal-dialog" role="document">
@@ -114,11 +140,7 @@ $(document).ready(function(){
           <div class="row buttons">
 
               <a data-dismiss="modal" data-toggle="modal" href="#HairModal" class="btn btn-primary">ヘア</a>
-
-
               <a href="men.html" class="btn btn-secondary">メン</a>
-
-
               <a href="dog.html" class="btn btn-success">ドッグ</a>
 
           </div>
@@ -142,7 +164,7 @@ $(document).ready(function(){
           </p>
           <div class="row buttons">
 
-              <a href="enquete.html" class="btn btn-primary">ヘア</a>
+              <a href="enquete.html" class="btn btn-primary">ケア</a>
               <a href="styling.html" class="btn btn-secondary">スタイリング</a>
 
 
@@ -161,6 +183,8 @@ $(document).ready(function(){
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12 text-center">
+          <h2 class="desc"><span>世界最高レベル<br class="br_on">
+          リアルオーガニックブランド</span></h2>
           <h1 class="font-weight-light"><img src="image/oway_logo.png" alt="OWAY ORGANIC WAY" class="img-fluid top-logo"></h1>
           <!-- <h3><span class="top_text">世界最高レベルのサロンオーガニックブランド</span></h3> -->
 
@@ -178,7 +202,7 @@ $(document).ready(function(){
       <!-- Agricosmetica -->
       <div class="tile-wrapper col-md-6">
         <a href="#" class="link-to-modal" data-toggle="modal" data-target="#myModal">
-          <img src="image/sect-bg/sect029.png" width="100%" alt="Agricosmetica" class="show_modal">
+          <img src="image/sect-bg/bg001.png" width="100%" alt="Agricosmetica" class="show_modal">
           <div class="text-overlay">
             <h2>Agricosmetica</h2>
             <h6>#アグリコスメティカ</h6>
@@ -190,7 +214,7 @@ $(document).ready(function(){
       <!-- Ortoficcina -->
       <div class="tile-wrapper col-md-6">
         <a href="#" class="link-to-modal" data-toggle="modal" data-target="#Ortoficcina">
-          <img src="image/sect-bg/sect011.png" width="100%" alt="Ortoficcina" class="show_modal">
+          <img src="image/sect-bg/bg002.png" width="100%" alt="Ortoficcina" class="show_modal">
           <div class="text-overlay">
             <h2>Ortoficcina</h2>
             <h6>#オルトフィッチーナ</h6>
@@ -202,7 +226,7 @@ $(document).ready(function(){
       <!-- Bio-Dynamic Farming -->
       <div class="tile-wrapper col-md-6">
         <a href="#" class="link-to-modal" data-toggle="modal" data-target="#biodynamic_farming">
-          <img src="image/sect-bg/sect019.png" width="100%" alt="Bio-Dynamic Farming" class="show_modal">
+          <img src="image/sect-bg/bg003.png" width="100%" alt="Bio-Dynamic Farming" class="show_modal">
           <div class="text-overlay">
             <h2>Bio-Dynamic Farming</h2>
             <h6>#バイオダイナミックファーミング</h6>
@@ -214,7 +238,7 @@ $(document).ready(function(){
       <!-- Essential Oils -->
       <div class="tile-wrapper col-md-6">
         <a href="#" class="link-to-modal" data-toggle="modal" data-target="#EssentialOil">
-          <img src="image/sect-bg/sect022.png" width="100%" alt="Essential Oils" class="show_modal">
+          <img src="image/sect-bg/bg004.png" width="100%" alt="Essential Oils" class="show_modal">
           <div class="text-overlay">
             <h2>Essential Oils</h2>
             <h6>#ピュアエッセンシャルオイル</h6>
@@ -226,7 +250,7 @@ $(document).ready(function(){
       <!-- Glass and Aluminum -->
       <div class="tile-wrapper col-md-6">
         <a href="#" class="link-to-modal" data-toggle="modal" data-target="#GlassAndAluminum">
-          <img src="image/sect-bg/sect012.png" width="100%" alt="Glass and Aluminum" class="show_modal">
+          <img src="image/sect-bg/bg005.png" width="100%" alt="Glass and Aluminum" class="show_modal">
           <div class="text-overlay">
             <h2>Glass and Aluminum</h2>
             <h6>#100％リサイクル可能</h6>
@@ -238,7 +262,7 @@ $(document).ready(function(){
       <!-- Stay Free -->
       <div class="tile-wrapper col-md-6">
         <a href="#" class="link-to-modal" data-toggle="modal" data-target="#StayFree">
-          <img src="image/sect-bg/sect020.png" width="100%" alt="Stay Free" class="show_modal">
+          <img src="image/sect-bg/bg006.png" width="100%" alt="Stay Free" class="show_modal">
           <div class="text-overlay">
             <h2>Stay Free</h2>
             <h6>#ステイフリー</h6>
@@ -250,7 +274,7 @@ $(document).ready(function(){
       <!-- Fair Trade -->
       <div class="tile-wrapper col-md-6">
         <a href="#" class="link-to-modal" data-toggle="modal" data-target="#FairTrade">
-          <img src="image/sect-bg/sect023.png" width="100%" alt="Ortoficcina" class="show_modal">
+          <img src="image/sect-bg/bg007.png" width="100%" alt="Ortoficcina" class="show_modal">
           <div class="text-overlay">
             <h2>Fair Trade</h2>
             <h6>＃フェアトレード</h6>
@@ -262,7 +286,7 @@ $(document).ready(function(){
       <!-- Less Packaging -->
       <div class="tile-wrapper col-md-6">
         <a href="#" class="link-to-modal" data-toggle="modal" data-target="#LessPackaging" >
-          <img src="image/sect-bg/sect026.png" width="100%" alt="Ortoficcina" class="show_modal">
+          <img src="image/sect-bg/bg008.png" width="100%" alt="Ortoficcina" class="show_modal">
           <div class="text-overlay">
             <h2>Less Packaging</h2>
             <h6>＃包装の無駄を省く</h6>
@@ -274,7 +298,7 @@ $(document).ready(function(){
       <!-- SDGs -->
       <div class="tile-wrapper col-md-6">
         <a href="#" class="link-to-modal" data-toggle="modal" data-target="#SDGs">
-          <img src="image/sect-bg/sect028.png" width="100%" alt="SDGs" class="show_modal">
+          <img src="image/sect-bg/bg009.png" width="100%" alt="SDGs" class="show_modal">
           <div class="text-overlay">
             <h2>SDGs</h2>
             <h6>＃グローバルトレンド</h6>
@@ -286,7 +310,7 @@ $(document).ready(function(){
       <!-- PETA Cruelty Free -->
       <div class="tile-wrapper col-md-6">
         <a href="#" class="link-to-modal" data-toggle="modal" data-target="#PETA">
-          <img src="image/we_love_animals.jpeg" width="100%" alt="Ortoficcina" class="show_modal">
+          <img src="image/sect-bg/bg010.png" width="100%" alt="Ortoficcina" class="show_modal">
           <div class="text-overlay">
             <h2>PETA Cruelty Free</h2>
             <h6>＃クルエルティフリー</h6>
@@ -297,8 +321,9 @@ $(document).ready(function(){
 
       <!-- PETA Cruelty Free -->
       <div class="purchase col-md-6">
-        <a href="#" class="link-to-modal" data-toggle="modal" data-target="#onLoadModal">
-          <img src="image/product.jpg" width="100%" alt="Ortoficcina" class="purchase-items">
+        <a href="https://ifing-beauty.com/products/list?category_id=18">
+        <!-- <a href="#" class="link-to-modal" data-toggle="modal" data-target="#onLoadModal"> -->
+          <img src="image/sect-bg/sect037.png" width="100%" alt="Ortoficcina" class="purchase-items">
           <div class="text-overlay h-75">
             <h2><img img src="image/oway_logo.png" width="65" height="65">Care</h2>
             <h6>オーガニック・ヘアケアシリーズ</h6>
@@ -311,11 +336,39 @@ $(document).ready(function(){
 
       <!-- PETA Cruelty Free -->
       <div class="purchase col-md-6">
-        <a href="#" class="link-to-modal" data-toggle="modal" data-target="#onLoadModal">
-          <img src="image/infine.jpg" width="100%" alt="Ortoficcina" class="purchase-items">
+        <a href="https://ifing-beauty.com/products/list?category_id=19">
+          <img src="image/sect-bg/sect036.jpg" width="100%" alt="Ortoficcina" class="purchase-items">
           <div class="text-overlay h-75">
             <h2><img src="image/oway_logo.png" width="65" height="65">infine</h2>
             <h6>オーガニック・スタイリングシリーズ</h6>
+            <div class="product_link col-md-6 offset-md-3 col-12">
+            <p>詳しくはこちら</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- PETA Cruelty Free -->
+      <div class="purchase col-md-6">
+        <a href="https://ifing-beauty.com/products/list?category_id=23">
+          <img src="image/sect-bg/sect035.jpg" width="100%" alt="Ortoficcina" class="purchase-items">
+          <div class="text-overlay h-75">
+            <h2>OW MEN</h2>
+            <h6>メンズ</h6>
+            <div class="product_link col-md-6 offset-md-3 col-12">
+            <p>詳しくはこちら</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- PETA Cruelty Free -->
+      <div class="purchase col-md-6">
+        <a href="#">
+          <img src="image/sect-bg/sect032.jpg" width="100%" alt="Ortoficcina" class="purchase-items">
+          <div class="text-overlay h-75">
+            <h2>duetto</h2>
+            <h6>デュエット</h6>
             <div class="product_link col-md-6 offset-md-3 col-12">
             <p>詳しくはこちら</p>
             </div>

@@ -51,6 +51,18 @@ body {
     font-family: "Cormorant Garamond", sans-serif;
 }
 
+#wrapper .questionnaire h6 {
+  text-align: center;
+  line-height:1.5em;
+  margin-bottom:3vh;
+}
+
+#wrapper .questionnaire h6 span {
+  color:white;
+  background:#404146;
+  padding:5px 10px;
+}
+
 #wrapper .questionnaire .button {
   padding: 20px 90px;
     text-align: center;
@@ -192,6 +204,14 @@ ul.cbox-question li input[type="checkbox"]:focus + label {
 }
 /*checkbox*/
 
+#top_page {
+  background: url('../image/orto5.jpg');
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #section1 {
   background: url('../image/sect005.jpg');
   position: relative;
@@ -271,6 +291,13 @@ ul.cbox-question li input[type="checkbox"]:focus + label {
     text-align: center;
     text-decoration:underline;
     font-family: "Montserrat", "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", sans-serif;
+}
+
+.result h6 {
+  text-align: center;
+  /*color: red;*/
+  font-size:0.8em;
+  padding:5px 0;
 }
 
 .result p.link {
