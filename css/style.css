@@ -2,6 +2,8 @@ body {
   background:#000;
 }
 
+
+
 .br_on {
   display: none;
 }
@@ -16,18 +18,22 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  position: relative;
 }
 
 
 
 .banner h2.desc {
    font-size:24px;
-   margin-bottom:4vh;
+   /*margin-bottom:4vh;*/
+   position:absolute;
+   top:6%;
+   left:3%;
 }
 
 .banner h2.desc span {
-  color:white;
-  background:black;
+/*  color:white;
+  background:black;*/
   padding:5px 10px;
   line-height: 2em;
 }
@@ -293,7 +299,7 @@ body {
 
 
 .modal-footer a {
-  color: white;
+  /*color: white;*/
   padding:10px 20px;
   border-radius:10px;
   box-shadow:1px 1px 3px #000;
@@ -413,6 +419,14 @@ body {
   .biodynamic .biodynamic_img {
     margin-bottom:3vh;
   }
+
+  .banner h2.desc {
+   font-size:18px;
+   /*margin-bottom:4vh;*/
+   position:absolute;
+   top:5%;
+   left:3%;
+}
 
 
 }
