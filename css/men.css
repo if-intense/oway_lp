@@ -13,6 +13,40 @@ body {
   width: 200px;
 }
 
+h2.title {
+  text-align: center;
+  margin:3vh auto;
+}
+
+.drop-down-text p span, .category-text h6 span {
+    background: black;
+    padding: 5px 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.category-text {
+  margin-top:3vh;
+}
+
+.drop-down-select select, .category-select select, .shave-select select, .type-select select {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    /* margin: 0 auto; */
+    border: 1px solid rgba(255,255,255,0.5);
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+}
+
+.category-select, .shave-select, .type-select {
+  margin-top:2vh;
+}
 
 .tablet-768-only {
   display:none;

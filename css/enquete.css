@@ -36,7 +36,7 @@ body {
   position: relative;
     top: 0;
     width: 100%;
-    color: #404146;
+    color: #000;
     text-align: center;
     border-bottom: #9a9a9a solid 1px;
     padding-top: 30px;
@@ -47,8 +47,12 @@ body {
     font-size: 10px;
     letter-spacing: 2px;
     line-height: 32px;
-    color: #404146;
+    color: #000;
     font-family: "Cormorant Garamond", sans-serif;
+}
+
+#wrapper .questionnaire .question_title p {
+    text-align: center;
 }
 
 #wrapper .questionnaire h6 {
@@ -248,6 +252,14 @@ ul.cbox-question li input[type="checkbox"]:focus + label {
   background-size: cover;
 }
 
+#section6 {
+  background: url('../image/sect-bg/sect021.png');
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #wrapper button {
     background: #5cd28d;
     width: 250px;
@@ -272,6 +284,7 @@ ul.cbox-question li input[type="checkbox"]:focus + label {
     margin: 0 auto;
     display: none;
     z-index: 2;
+    width:100%;
 }
 
 .result h2 {
@@ -285,6 +298,7 @@ ul.cbox-question li input[type="checkbox"]:focus + label {
 
 .result h3 {
     text-align: center;
+    font-size:1.25em;
     text-decoration:underline;
     font-family: "Montserrat", "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", sans-serif;
 }
@@ -307,6 +321,8 @@ ul.cbox-question li input[type="checkbox"]:focus + label {
   margin:0 auto;
   text-decoration: underline;
 }
+
+
 
 /*.result p*/
 
@@ -545,7 +561,9 @@ ul.cbox-question li input[type="checkbox"]:focus + label {
 
 
 
+@media (min-width: 992px) {
 
+}
 
 
 @media screen and (max-width: 896px) {
@@ -557,6 +575,12 @@ ul.cbox-question li input[type="checkbox"]:focus + label {
     width:100%;
     margin:40px auto;
   }
+}
+
+@media screen and (min-width: 576px) {
+  .modal-dialog {
+          max-width: 960px !important; /* New width for default modal */
+        }
 }
 
 @media screen and (max-width: 575px) {
@@ -572,4 +596,6 @@ ul.cbox-question li input[type="checkbox"]:focus + label {
     margin-left: 10px;
     font-size:10px;
   }
+
+
 }
